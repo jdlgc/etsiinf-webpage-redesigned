@@ -20,6 +20,8 @@ import {
 } from '@carbon/icons-react';
 
 import Link from 'next/link';
+import Image from 'next/image';
+
 
 const TutorialHeader = () => (
   <HeaderContainer
@@ -31,15 +33,22 @@ const TutorialHeader = () => (
           onClick={onClickSideNavExpand}
           isActive={isSideNavExpanded}
         />
+        <Image
+          className="logo-header"
+          src="/logo.png"
+          alt="Carbon illustration"
+          width={40}
+          height={40}
+        />
         <Link href="/" passHref legacyBehavior>
-          <HeaderName prefix="IBM">
-            Carbon Tutorial
+          <HeaderName prefix="ETS">
+            Intenieros Informáticos
           </HeaderName>
         </Link>
         <HeaderNavigation aria-label="Carbon Tutorial">
-          <Link href="/news" passHref legacyBehavior>
+          <Link href="/home" passHref legacyBehavior>
             <HeaderMenuItem >
-              News
+              Home
             </HeaderMenuItem>
           </Link>
           <Link href="/subjects" passHref legacyBehavior>
@@ -71,9 +80,9 @@ const TutorialHeader = () => (
           isPersistent={false}>
           <SideNavItems>
             <HeaderSideNavItems>
-              <Link href="/news" passHref legacyBehavior>
+              <Link href="/home" passHref legacyBehavior>
                 <HeaderMenuItem >
-                  News
+                  Home
                 </HeaderMenuItem>
               </Link>
               <Link href="/subjects" passHref legacyBehavior>

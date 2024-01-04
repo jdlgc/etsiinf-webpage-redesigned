@@ -31,8 +31,7 @@ export default function LandingPage() {
         <Tabs defaultSelectedIndex={0}>
           <TabList className="tabs-group" aria-label="Page navigation">
             <Tab>About</Tab>
-            <Tab>Design</Tab>
-            <Tab>Develop</Tab>
+            <Tab>News</Tab>
           </TabList>
           <TabPanels>
             <TabPanel>
@@ -74,19 +73,6 @@ export default function LandingPage() {
                 >
                   Rapidly build beautiful and accessible experiences. The Carbon
                   kit contains all resources you need to get started.
-                </Column>
-              </Grid>
-            </TabPanel>
-            <TabPanel>
-              <Grid className="tabs-group-content">
-                <Column
-                  lg={16}
-                  md={8}
-                  sm={4}
-                  className="landing-page__tab-content"
-                >
-                  Carbon provides styles and components in Vanilla, React,
-                  Angular, and Vue for anyone building on the web.
                 </Column>
               </Grid>
             </TabPanel>

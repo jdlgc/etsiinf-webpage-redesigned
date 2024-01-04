@@ -2,13 +2,15 @@
 @use '@carbon/react/scss/breakpoint' as *;
 @use './mixins.scss' as *;
 
-.footer__r1 {
+.footer__r1,
+.footer__r2 {
     padding-top: $spacing-09;
     padding-bottom: $spacing-09;
+    padding-right: $spacing-06;
     padding-left: $spacing-06;
 
-    margin-left: -20px;
-    margin-right: -20px;
+    margin-left: 10px;
+    margin-right: 10px;
 
     @include breakpoint-down(md) {
         margin-left: 0;
@@ -16,7 +18,7 @@
     }
 }
 
-.news-page {
+.footer {
     @include footer-background;
 }
 
