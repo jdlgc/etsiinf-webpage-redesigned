@@ -23,7 +23,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 
-const TutorialHeader = () => (
+const TopHeader = () => (
   <HeaderContainer
     render={({ isSideNavExpanded, onClickSideNavExpand }) => (
       <Header aria-label="Carbon Tutorial">
@@ -33,16 +33,17 @@ const TutorialHeader = () => (
           onClick={onClickSideNavExpand}
           isActive={isSideNavExpanded}
         />
-        <Image
-          className="logo-header"
-          src="/logo.png"
-          alt="Carbon illustration"
-          width={40}
-          height={40}
-        />
+
         <Link href="/" passHref legacyBehavior>
-          <HeaderName prefix="ETS">
-            Intenieros Informáticos
+          <HeaderName prefix="">
+          <Image
+              className="logo-header"
+              src="/logo.png"
+              alt="Carbon illustration"
+              width={40}
+              height={40}
+            />
+            ETS Ingenieros Informáticos
           </HeaderName>
         </Link>
         <HeaderNavigation aria-label="Carbon Tutorial">
@@ -122,4 +123,4 @@ const TutorialHeader = () => (
   />
 );
 
-export default TutorialHeader;
+export default TopHeader;
