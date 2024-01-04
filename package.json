@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "@carbon/icons-react": "^11.33.0",
-    "@carbon/react": "1.35.0",
+    "@carbon/react": "^1.35.0",
     "core-js": "^3.35.0",
     "eslint": "8.44.0",
     "eslint-config-next": "13.4.9",
@@ -28,7 +28,6 @@
     "typescript": "^5.3.3"
   },
   "devDependencies": {
-    "lint-staged": "8.1.5",
     "prettier": "^2.8.8"
   },
   "browserslist": [

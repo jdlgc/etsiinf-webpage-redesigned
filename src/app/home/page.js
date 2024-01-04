@@ -1,7 +1,5 @@
 'use client';
 
-import Image from 'next/image';
-
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -14,6 +12,7 @@ import {
   Grid,
   Column,
 } from '@carbon/react';
+import Image from 'next/image';
 
 export default function LandingPage() {
   return (
@@ -30,7 +29,7 @@ export default function LandingPage() {
       </Column>
       <Column lg={16} md={8} sm={4} className="landing-page__r2">
         <Tabs defaultSelectedIndex={0}>
-          <TabList className="tabs-group" aria-label="Tab navigation">
+          <TabList className="tabs-group" aria-label="Page navigation">
             <Tab>About</Tab>
             <Tab>Design</Tab>
             <Tab>Develop</Tab>
@@ -55,13 +54,13 @@ export default function LandingPage() {
                   <Button>Learn more</Button>
                 </Column>
                 <Column md={4} lg={{ span: 8, offset: 7 }} sm={4}>
-                  <Image
+                  {/* <Image
                     className="landing-page__illo"
                     src="/tab-illo.png"
                     alt="Carbon illustration"
                     width={786}
                     height={647}
-                  />
+                  /> */}
                 </Column>
               </Grid>
             </TabPanel>
@@ -93,22 +92,6 @@ export default function LandingPage() {
             </TabPanel>
           </TabPanels>
         </Tabs>
-      </Column>
-      <Column lg={16} md={8} sm={4} className="landing-page__r3">
-        <Grid>
-          <Column md={4} lg={4} sm={4}>
-            <h3 className="landing-page__label">The Principles</h3>
-          </Column>
-          <Column md={4} lg={4} sm={4}>
-            Carbon is Open
-          </Column>
-          <Column md={4} lg={4} sm={4}>
-            Carbon is Modular
-          </Column>
-          <Column md={4} lg={4} sm={4}>
-            Carbon is Consistent
-          </Column>
-        </Grid>
       </Column>
     </Grid>
   );
