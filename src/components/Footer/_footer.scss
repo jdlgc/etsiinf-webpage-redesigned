@@ -2,8 +2,8 @@
 @use '@carbon/react/scss/breakpoint' as *;
 @use './mixins.scss' as *;
 
-.footer__r1,
-.footer__r2 {
+.footer__c1,
+.footer__c2 {
     padding-top: $spacing-09;
     padding-bottom: $spacing-09;
     padding-right: $spacing-06;
@@ -23,6 +23,6 @@
 }
 
 .widget-title {
-    margin-bottom: 15px;
-    clear: both;
+    padding-top: $spacing-09;
+    padding-right: $spacing-06;
 }
