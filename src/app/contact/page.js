@@ -39,7 +39,9 @@ function ContactPage() {
       <Column lg={16} md={8} sm={4} className="exams-page__r1">
         <Form aria-label="sample form">
           <Stack gap={7}>
-            <Tooltip direction="bottom" label="Enter your name">
+
+          <Tooltip direction="bottom" label="Enter your name">
+
             <TextInput {...TextInputName} />
             </Tooltip>
             <Tooltip direction="bottom" label="Enter your e-mail">
