@@ -61,7 +61,7 @@
 
 "@carbon/icons-react@^11.33.0":
   version "11.33.0"
-  resolved "https://registry.yarnpkg.com/@carbon/icons-react/-/icons-react-11.33.0.tgz#495e6c82f620700980cc3f0d2a303ce421230401"
+  resolved "https://registry.npmjs.org/@carbon/icons-react/-/icons-react-11.33.0.tgz#495e6c82f620700980cc3f0d2a303ce421230401"
   integrity sha512-5xW8CRMKvqdNYKdG8ihGGJkiLMxFJaRuRNYAzlvIMZ6XfhVJZPer8euQO/bgNGEN0M/Eszxdc9isG33tWLDvJw==
   dependencies:
     "@carbon/icon-helpers" "^10.45.0"

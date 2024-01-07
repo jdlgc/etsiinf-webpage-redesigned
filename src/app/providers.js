@@ -8,7 +8,7 @@ import Footer from '@/components/Footer/Footer';
 export function Providers({ children }) {
   return (
     <div>
-        <Theme theme="g10">
+        <Theme theme="g100">
           <TopHeader />
         </Theme>
         <Content>

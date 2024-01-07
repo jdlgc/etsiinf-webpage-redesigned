@@ -85,7 +85,7 @@ export default function LandingPage() {
                     <Column key={index} lg={5} md={4} sm={4} className='landing-page__news__c1'>
                       <Theme theme="white">
                         <ExpressiveCard
-                          className="card"
+                          className="card expressive-card"
                           mediaRatio="2x1"
                           media={<div style={{
                             height: '150px',  // Alto fijo
