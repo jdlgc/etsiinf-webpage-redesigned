@@ -11,9 +11,50 @@ import {
   TabPanel,
   Grid,
   Column,
+  Theme
 } from '@carbon/react';
+import { ExpressiveCard } from '@carbon/ibm-products';
+
+
 import Image from 'next/image';
 
+const newsArray = [
+  {
+    title: 'El grupo de investigación Ontology Engineering Group de la ETSIINF lidera el proyecto INESData',
+    content: 'El objetivo principal de INESData es crear una incubadora de espacios de datos en España',
+    image: 'https://www.fi.upm.es/GestorTablon/GTimgPortada/4993-imagen_2023_12_19_105619500.png',
+    width: '150',
+    height: '34'
+  },
+  {
+    title: 'El proyecto TeresIA, en el que colabora el Grupo de Ingeniería Ontológica de la ETSIINF,  recuperará y fomentará la terminología en español aplicando inteligencia artificial y conocimiento experto',
+    content: 'La iniciativa, coordinada por el CSIC con la participación de varias instituciones, ha sido dotada con 1,4 millones de euros por la Secretaría de Estado de Digitalización e Inteligencia Artificial',
+    image: 'https://www.fi.upm.es/GestorTablon/GTimgPortada/4986-Opera_Instanta__769_nea_2023_12_11_091120_www.csic.es.png',
+    width: '138',
+    height: '61'
+  },
+  {
+    title: 'El proyecto TeresIA, en el que colabora el Grupo de Ingeniería Ontológica de la ETSIINF,  recuperará y fomentará la terminología en español aplicando inteligencia artificial y conocimiento experto',
+    content: 'La iniciativa, coordinada por el CSIC con la participación de varias instituciones, ha sido dotada con 1,4 millones de euros por la Secretaría de Estado de Digitalización e Inteligencia Artificial',
+    image: 'https://www.fi.upm.es/GestorTablon/GTimgPortada/4986-Opera_Instanta__769_nea_2023_12_11_091120_www.csic.es.png',
+    width: '138',
+    height: '61'
+  },
+  {
+    title: 'El proyecto TeresIA, en el que colabora el Grupo de Ingeniería Ontológica de la ETSIINF,  recuperará y fomentará la terminología en español aplicando inteligencia artificial y conocimiento experto',
+    content: 'La iniciativa, coordinada por el CSIC con la participación de varias instituciones, ha sido dotada con 1,4 millones de euros por la Secretaría de Estado de Digitalización e Inteligencia Artificial',
+    image: 'https://www.fi.upm.es/GestorTablon/GTimgPortada/4986-Opera_Instanta__769_nea_2023_12_11_091120_www.csic.es.png',
+    width: '138',
+    height: '61'
+  }, {
+    title: 'El proyecto TeresIA, en el que colabora el Grupo de Ingeniería Ontológica de la ETSIINF,  recuperará y fomentará la terminología en español aplicando inteligencia artificial y conocimiento experto',
+    content: 'La iniciativa, coordinada por el CSIC con la participación de varias instituciones, ha sido dotada con 1,4 millones de euros por la Secretaría de Estado de Digitalización e Inteligencia Artificial',
+    image: 'https://www.fi.upm.es/GestorTablon/GTimgPortada/4986-Opera_Instanta__769_nea_2023_12_11_091120_www.csic.es.png',
+    width: '138',
+    height: '61'
+  },
+  // Add more news items as needed
+];
 export default function LandingPage() {
   return (
     <Grid className="landing-page" fullWidth>
@@ -35,50 +76,48 @@ export default function LandingPage() {
           </TabList>
           <TabPanels>
             <TabPanel>
-              <Grid className="tabs-group-content">
-                <Column
-                  md={4}
-                  lg={7}
-                  sm={4}
-                  className="landing-page__tab-content"
-                >
-                  <h2 className="landing-page__subheading">What is Carbon?</h2>
-                  <p className="landing-page__p">
-                    Carbon is IBM’s open-source design system for digital
-                    products and experiences. With the IBM Design Language as
-                    its foundation, the system consists of working code, design
-                    tools and resources, human interface guidelines, and a
-                    vibrant community of contributors.
-                  </p>
-                  <Button>Learn more</Button>
-                </Column>
-                <Column md={4} lg={{ span: 8, offset: 7 }} sm={4}>
-                  {/* <Image
-                    className="landing-page__illo"
-                    src="/tab-illo.png"
-                    alt="Carbon illustration"
-                    width={786}
-                    height={647}
-                  /> */}
-                </Column>
-              </Grid>
+
             </TabPanel>
             <TabPanel>
-              <Grid className="tabs-group-content">
-                <Column
-                  lg={16}
-                  md={8}
-                  sm={4}
-                  className="landing-page__tab-content"
-                >
-                  Rapidly build beautiful and accessible experiences. The Carbon
-                  kit contains all resources you need to get started.
-                </Column>
-              </Grid>
+              <div className="cds--grid card-story">
+                <Grid fullWidth>
+                  {newsArray.map((newsItem, index) => (
+                    <Column key={index} lg={5} md={4} sm={4} className='landing-page__news__c1'>
+                      <Theme theme="white">
+                        <ExpressiveCard
+                          className="card"
+                          mediaRatio="2x1"
+                          media={<div style={{
+                            height: '150px',  // Alto fijo
+                            backgroundColor: 'white',  // Fondo blanco
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                          }}>
+                            <Image
+                              src={newsItem.image}  // Ruta a tu imagen
+                              alt={newsItem.title}
+                              width={newsItem.width}  // Ancho de la imagen
+                              height={newsItem.height}  // Alto de la imagen
+                              objectFit="contain"
+                            />
+                          </div>}
+                          primaryButtonText="Read more"
+                          primaryButtonHref='/contact'
+                          primaryButtonKind='primary'
+                          title={newsItem.title}
+                        >
+                          <p>{newsItem.content}</p>
+                        </ExpressiveCard>
+                      </Theme>
+                    </Column>
+                  ))}
+                </Grid>
+              </div>
             </TabPanel>
           </TabPanels>
         </Tabs>
       </Column>
-    </Grid>
+    </Grid >
   );
 }

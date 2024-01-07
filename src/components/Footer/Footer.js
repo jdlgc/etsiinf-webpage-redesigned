@@ -14,7 +14,7 @@ const iframeStyle = {
 function Footer() {
   return (
     <Grid className="footer" fullWidth>
-      <Column lg={16} md={16} sm={16}>
+      <Column lg={16} md={8} sm={4}>
         <h2 class="widget-title">More info</h2>
       </Column>
       <Column
