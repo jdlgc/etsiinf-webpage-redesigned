@@ -42,7 +42,7 @@ const TopHeader = () => {
               <Image
                 className="logo-header"
                 src="/logo.png"
-                alt="ETSIINF logo"
+                alt="ETSIINF shield"
                 width={40}
                 height={40}
               />
@@ -97,7 +97,7 @@ const TopHeader = () => {
                 tooltipAlignment="end">
                 <Image
                   src="/profile.jpg"
-                  alt="Profile image."
+                  alt="User avatar"
                   width={40}
                   height={40}
                   className="profile-image"

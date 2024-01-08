@@ -37,12 +37,12 @@ const SubjectsTable = ({ rows, headers }) => {
       render={({ rows, headers, getHeaderProps, getRowProps, getTableProps, onInputChange }) => (
         <TableContainer title="Listado de asignaturas del plan de estudios" description="10AN - MÁSTER UNIVERSITARIO EN INGENIERÍA INFORMÁTICA (MUII)" aria-label='Subjects table' role='table'>
           <TableToolbar aria-label='Toolbar for search' role='toolbar'>
-            <TableToolbarSearch expanded={true} onChange={onInputChange} />
+          <TableToolbarSearch expanded={true} onChange={onInputChange} role="searchbox"  />
           </TableToolbar>
           <Table {...getTableProps()}>
             <TableHead>
               <TableRow role='row'>
-                <TableExpandHeader role='columnheader' />
+                <TableHeader id='expand' role='columnheader'>Expand</TableHeader>
                 {headers.map((header) => (
                   <TableHeader key={header.key} {...getHeaderProps({ header, isSortable: true })} role='columnheader'>
                     {header.header}
@@ -53,13 +53,15 @@ const SubjectsTable = ({ rows, headers }) => {
             <TableBody>
               {rows.map((row) => (
                 <React.Fragment key={row.id}>
-                  <TableExpandRow {...getRowProps({ row })} onClick={() => handleExpandClick(row.id)} isExpanded={expandedRowId === row.id} role='rowgroup'>
+                  <TableExpandRow {...getRowProps({ row })} onClick={() => handleExpandClick(row.id)} isExpanded={expandedRowId === row.id} role='row'> {/* Ensure proper row role */}
                     {row.cells.map((cell) => (
-                      <TableCell key={cell.id} role='cell'>{cell.value}</TableCell>
+                      <TableCell key={cell.id} headers='expand' role='cell'>
+                        {cell.value}
+                      </TableCell>
                     ))}
                   </TableExpandRow>
                   {expandedRowId === row.id && (
-                    <TableExpandedRow colSpan={headers.length + 1} role='rowgroup'>
+                    <TableExpandedRow colSpan={headers.length + 1} role='rowgroup'> {/* Ensure proper rowgroup role */}
                       <div>
                         <iframe tabIndex={row.isExpanded ? "0" : "-1"} src={expandedLearningGuide} width="100%" height="500px" />
                       </div>

@@ -14,7 +14,7 @@ import {
   PaginationNav
 } from '@carbon/react';
 import { ExpressiveCard } from '@carbon/ibm-products';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 
 import Image from 'next/image';
@@ -96,8 +96,13 @@ export default function LandingPage() {
 
   const totalPages = Math.ceil(newsArray.length / itemsPerPage);
 
+  useEffect(() => {
+    // Dynamically set the document title
+    document.title = 'Escuela Técnica Superior de Ingenieros Informáticos';
+  }, []);
+
   return (
-    <Grid className="landing-page" fullWidth>
+    <Grid className="landing-page" fullWidth >
       <Column lg={16} md={8} sm={4} className="landing-page__banner">
         <div style={{
           height: '200px',
@@ -119,7 +124,7 @@ export default function LandingPage() {
           }}>
             <Image
               src={"/logo.png"}
-              alt={"ETSIINF logo"}
+              alt={"ETSIINF shield"}
               width={100}
               height={100}
               style={{
@@ -127,18 +132,18 @@ export default function LandingPage() {
               }}
             />
             <h1 className="landing-page__heading" style={{
-              color: 'black',
-              width: '50%',
-              textAlign: 'left',
-              marginLeft: '30px'
-            }}>
-              Escuela Técnica Superior de Ingenieros Informáticos
-            </h1>
+            color: 'black',
+            width: '50%',
+            textAlign: 'left',
+            marginLeft: '30px'
+          }}>
+            Escuela Técnica Superior de Ingenieros Informáticos
+          </h1>
           </div>
         </div>
       </Column>
       <Column lg={16} md={8} sm={4} className="landing-page__r2">
-        <div id="main-content" role='main'>
+        <div className="main-content-div" id="main-content" role='alert'>
           <Tabs defaultSelectedIndex={0}>
             <TabList className="tabs-group" aria-label="Page navigation">
               <Tab>About</Tab>
@@ -223,7 +228,7 @@ export default function LandingPage() {
                         <Theme theme="white">
                           <ExpressiveCard
                             className="card expressive-card"
-                            media={<div style={{
+                            media={<div className='card-header' style={{
                               height: '150px',
                               backgroundColor: '#E3E3E3',
                               display: 'flex',
@@ -256,6 +261,7 @@ export default function LandingPage() {
                     totalItems={totalPages}
                     itemsShown={6}
                     onChange={handlePageChange}
+                    aria-label="Pagination navigation"
                   />
                 </div>
               </TabPanel>

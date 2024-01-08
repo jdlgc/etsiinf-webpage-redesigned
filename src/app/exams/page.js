@@ -221,25 +221,34 @@ function ExamsPage() {
   return (
     <Grid className="exams-page">
       <Column lg={16} md={8} sm={4} className="exams-page__r1">
-        <div id="main-content" role='main'>
+        <div className="main-content-div" id="main-content" role='alert'>
           <h1 className="exams-header">Exams</h1>
           <Accordion align='start' size='lg'>
             <AccordionItem title={<h2>January Exams</h2>} onClick={() => handleAccordionClick('january-exams')} isExpanded={expandedAccordionId === 'january-exams'}>
               <JanuaryExamsTable headers={headers} rows={rowsJanuaryExams} />
               <div>
-                <iframe tabIndex={expandedAccordionId === 'january-exams' ? "0" : "-1"} src='https://www.fi.upm.es/docs/estudios/muii/1645_examenes_enero_23_24_MUII.pdf' width="100%" height="500px" />
+                <iframe tabIndex={expandedAccordionId === 'january-exams' ? "0" : "-1"} src='https://www.fi.upm.es/docs/estudios/muii/1645_examenes_enero_23_24_MUII.pdf' allowfullscreen
+                  style={{ width: '100%', height: '200px' }}
+                  title="July exams"
+                ></iframe>
               </div>
             </AccordionItem>
             <AccordionItem title={<h2>June Exams</h2>} onClick={() => handleAccordionClick('june-exams')} isExpanded={expandedAccordionId === 'june-exams'}>
               <JanuaryExamsTable headers={headers} rows={rowsJanuaryExams} />
               <div>
-                <iframe tabIndex={expandedAccordionId === 'june-exams' ? "0" : "-1"} src='https://www.fi.upm.es/docs/estudios/muii/1645_examenes_enero_23_24_MUII.pdf' width="100%" height="500px" />
+                <iframe tabIndex={expandedAccordionId === 'june-exams' ? "0" : "-1"} src='https://www.fi.upm.es/docs/estudios/muii/1645_examenes_enero_23_24_MUII.pdf' allowfullscreen
+                  style={{ width: '100%', height: '200px' }}
+                  title="July exams"
+                ></iframe>
               </div>
             </AccordionItem>
             <AccordionItem title={<h2>July Exams</h2>} onClick={() => handleAccordionClick('july-exams')} isExpanded={expandedAccordionId === 'july-exams'}>
               <JanuaryExamsTable headers={headers} rows={rowsJanuaryExams} />
               <div>
-                <iframe tabIndex={expandedAccordionId === 'july-exams' ? "0" : "-1"} src='https://www.fi.upm.es/docs/estudios/muii/1645_examenes_enero_23_24_MUII.pdf' width="100%" height="500px" />
+                <iframe tabIndex={expandedAccordionId === 'july-exams' ? "0" : "-1"} src='https://www.fi.upm.es/docs/estudios/muii/1645_examenes_enero_23_24_MUII.pdf' allowfullscreen
+                  style={{ width: '100%', height: '200px' }}
+                  title="July exams"
+                ></iframe>
               </div>
             </AccordionItem>
           </Accordion>

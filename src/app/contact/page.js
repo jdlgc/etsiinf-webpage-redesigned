@@ -53,7 +53,7 @@ function ContactPage() {
   return (
     <Grid className="contact-page">
       <Column lg={16} md={8} sm={4} className="form-page__r1">
-        <div id="main-content" role='main'>
+      <div className="main-content-div" id="main-content" role='alert'>
           <h1 className="send-header">Send us a message</h1>
           <p className="comment" aria-label="Required field">*Required field</p>
           <Form aria-label="Contact form">

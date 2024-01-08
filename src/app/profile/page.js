@@ -131,30 +131,30 @@ function ProfilePage() {
   };
 
   return (
-    <Grid className="profile-page">
-      <Column lg={16} md={8} sm={4} className="landing-page__banner">
-        <div id="main-content" role='main' className="centered-content">
+    <div className="centered-content" id="main-content" role='alert'>
+      <Grid className="profile-page">
+        <Column lg={16} md={8} sm={4} className="landing-page__banner">
           <h1 className="profile-header">Profile</h1>
           <Image
             src="/profile.jpg"
-            alt="Profile image"
+            alt="User avatar"
             width={150}
             height={150}
             className="profile-image"
           />
           <p className="name-content"><strong>{user.name} {user.surname}</strong></p>
           <p className="studies-content"><strong>Sutdies: </strong>{user.studies}</p>
-        </div>
-        <div style={{ height: '50px' }}></div> 
-      </Column>
-      <Column lg={16} md={8} sm={4} className="profile-page__banner">
-        <h2 className="subjects-header">Subjects</h2>
-        <SubjectsTable headers={headersSubjects} rows={rowsSubjects} />
-        <h2 className="exams-header">Exams</h2>
-        <ExamsTable headers={headersExams} rows={rowsExams} />
-        <div style={{ height: '50px' }}></div> 
-      </Column>
-    </Grid>
+          <div style={{ height: '50px' }}></div>
+        </Column>
+        <Column lg={16} md={8} sm={4} className="profile-page__banner">
+          <h2 className="subjects-header">Subjects</h2>
+          <SubjectsTable headers={headersSubjects} rows={rowsSubjects} />
+          <h2 className="exams-header">Exams</h2>
+          <ExamsTable headers={headersExams} rows={rowsExams} />
+          <div style={{ height: '50px' }}></div>
+        </Column>
+      </Grid>
+    </div>
   );
 }
 

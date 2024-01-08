@@ -339,14 +339,14 @@ const rows = [
 
 function SubjectsPage() {
   return (
-    <Grid className="subjects-page">
-      <Column lg={16} md={8} sm={4} className="subjects-page__r1">
-        <div id="main-content" role='main'>
-          <h1 className="exams-header">Subjects</h1>
-          <SubjectsTable headers={headers} rows={rows} orginalRows={rows} />
-        </div>
-      </Column>
-    </Grid>
+    <div className="main-content-div" id="main-content" role='alert'>
+        <Grid>
+          <Column lg={16} md={8} sm={4} className="subjects-page__r1">
+            <h1 className="exams-header">Subjects</h1>
+            <SubjectsTable headers={headers} rows={rows} orginalRows={rows} />
+          </Column>
+        </Grid>
+    </div>
   );
 }
 

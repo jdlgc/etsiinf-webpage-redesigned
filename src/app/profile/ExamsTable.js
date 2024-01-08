@@ -29,7 +29,7 @@ const JanuaryExamsTable = ({ rows, headers }) => {
       }) => (
         <TableContainer aria-label='Exams table' role='table'>
           <TableToolbar aria-label='Exams toolbar' role='toolbar'>
-            <TableToolbarSearch expanded={true} onChange={onInputChange} />
+          <TableToolbarSearch expanded={true} onChange={onInputChange} role="searchbox" />
           </TableToolbar>
           <Table {...getTableProps()} size='lg' useZebraStyles={false} aria-label="January exams table">
             <TableHead>
