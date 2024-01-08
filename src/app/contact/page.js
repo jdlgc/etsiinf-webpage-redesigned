@@ -9,11 +9,7 @@ import {
   TextArea,
   Button,
   Tooltip,
-  Toggletip,
-  ToggletipButton,
-  ToggletipContent
 } from '@carbon/react';
-import { Information } from '@carbon/react/icons';
 
 const TextInputName = {
   className: 'form-name-class',
@@ -35,7 +31,7 @@ const TextInputTitle = {
   className: 'form-title-class',
   id: 'title',
   placeholder: 'Title*',
-  labelText: 'Title' ,
+  labelText: 'Title',
   required: true
 };
 
@@ -50,32 +46,34 @@ const TextAreaMessage = {
 
 
 const buttonEvents = {
-  className: 'some-class'
+  className: 'button-class'
 };
 
 function ContactPage() {
   return (
-    <Grid className="exams-page">
-      <Column lg={16} md={8} sm={4} className="exams-page__r1">
-        <Form aria-label="sample form">
-          <h3>Send us a message</h3>
-          <Stack gap={7}>
-            <span className="comment" aria-label="required field">*Required field</span>
-            <TextInput {...TextInputName} />
-            <Tooltip align="top" label="Enter your e-mail" closeOnActivation={true}>
-              <TextInput {...TextInputEmail} />
-            </Tooltip>
-            <Tooltip align="top" label="Enter your Title" closeOnActivation={true}>
-              <TextInput {...TextInputTitle} />
-            </Tooltip>
-            <Tooltip align="top" label="Enter your message" closeOnActivation={true}>
-              <TextArea {...TextAreaMessage} />
-            </Tooltip>
-            <Button type="submit" className="some-class" {...buttonEvents}>
-              Submit
-            </Button>
-          </Stack>
-        </Form>
+    <Grid className="contact-page">
+      <Column lg={16} md={8} sm={4} className="form-page__r1">
+        <div id="main-content" role='main'>
+          <h1 className="send-header">Send us a message</h1>
+          <p className="comment" aria-label="Required field">*Required field</p>
+          <Form aria-label="Contact form">
+            <Stack gap={7}>
+              <TextInput {...TextInputName} />
+              <Tooltip align="top" label="Enter your e-mail" closeOnActivation={true}>
+                <TextInput {...TextInputEmail} />
+              </Tooltip>
+              <Tooltip align="top" label="Enter your Title" closeOnActivation={true}>
+                <TextInput {...TextInputTitle} />
+              </Tooltip>
+              <Tooltip align="top" label="Enter your message" closeOnActivation={true}>
+                <TextArea {...TextAreaMessage} />
+              </Tooltip>
+              <Button type="submit" className="button-class" {...buttonEvents}>
+                Submit
+              </Button>
+            </Stack>
+          </Form>
+        </div>
       </Column>
     </Grid>
   );

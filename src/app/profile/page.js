@@ -35,35 +35,35 @@ const headersSubjects = [
 const rowsSubjects = [
   {
     id: '1',
-    subject: 'DESARROLLO DE APLICACIONES MÓVILES',
+    subject: 'MOBILE APPLICATION DEVELOPMENT',
     reference: '103000642',
-    type: 'Optativa',
+    type: 'Elective',
     ects: '4.50',
     semester: '3',
-    intensification: 'Sistemas y Servicios Distribuidos (30 ECTS)',
+    intensification: 'Distributed Systems and Services (30 ECTS)',
     learning_guide: 'https://www.upm.es/comun_gauss/publico/guias/2023-24/1S/GA_10AN_103000642_1S_2023-24.pdf',
   },
   {
     id: '2',
-    subject: 'DATOS ABIERTOS Y GRAFOS DE CONOCIMIENTO (OPEN DATA AND KNOWLEDGE GRAPHS)',
+    subject: 'OPEN DATA AND KNOWLEDGE GRAPHS',
     reference: '103000924',
-    type: 'Optativa',
+    type: 'Elective',
     ects: '4.50',
     semester: '3',
-    intensification: 'Inteligencia Artificial (30 ECTS)',
+    intensification: 'Artificial Intelligence (30 ECTS)',
     learning_guide: 'https://www.upm.es/comun_gauss/publico/guias/2023-24/1S/GA_10AN_103000924_1S_2023-24.pdf',
   },
   {
     id: '3',
     subject: 'ACCESSIBLE DESIGN AND ASSISTIVE PRODUCTS',
     reference: '103001037',
-    type: 'Optativa',
+    type: 'Elective',
     ects: '9.00',
     semester: '3',
-    intensification: 'Interacción Persona Ordenador (30 ECTS)',
+    intensification: 'Human-Computer Interaction (30 ECTS)',
     learning_guide: 'https://www.upm.es/comun_gauss/publico/guias/2023-24/1S/GA_10AN_103001037_1S_2023-24.pdf',
   }
-]
+];
 
 const headersExams = [
   {
@@ -95,7 +95,7 @@ const rowsExams = [
     date: '16/01/2023',
     hour: '15:00 - 18:00',
     semester: '3rd semester',
-    classroom: '',
+    classroom: '6206',
   },
   {
     id: '2',
@@ -103,7 +103,7 @@ const rowsExams = [
     date: '17/01/2023',
     hour: '15:00 - 18:00',
     semester: '3rd semester',
-    classroom: '',
+    classroom: '6306',
   },
   {
     id: '3',
@@ -111,49 +111,51 @@ const rowsExams = [
     date: '23/01/2023',
     hour: '15:00 - 18:00',
     semester: '3rd semester',
-    classroom: '',
+    classroom: '6306',
   },
   {
     id: '4',
-    exam: 'Desarrollo de Aplicaciones Móviles',
+    exam: 'Mobile Application Development',
     date: '24/01/2023',
     hour: '15:00 - 18:00',
     semester: '3rd semester',
-    classroom: '',
+    classroom: '6106',
   },
 ]
 
 function ProfilePage() {
-  // Detalles del usuario
   const user = {
-    nombre: "Juan",
-    apellidos: "Pérez García",
-    estudios: "Ingeniería Informática"
+    name: "Saul",
+    surname: "Goodman",
+    studies: "Computer Engineering"
   };
 
   return (
     <Grid className="profile-page">
-      <Column lg={16} md={8} sm={4} className="profile-page__r1">
-            <h1>Profile Page</h1>
-            <Image
-              src="https://www.fi.upm.es/GestorTablon/GTimgPortada/4993-imagen_2023_12_19_105619500.png"
-              alt="Descripción de la imagen"
-              width={150}
-              height={150}
-              className="profile-image"
-            />
-            <p><strong>Nombre:</strong> {user.nombre}</p>
-            <p><strong>Apellidos:</strong> {user.apellidos}</p>
-            <p><strong>Estudios:</strong> {user.estudios}</p>
-        <h2>Subjects</h2>
+      <Column lg={16} md={8} sm={4} className="landing-page__banner">
+        <div id="main-content" role='main' className="centered-content">
+          <h1 className="profile-header">Profile</h1>
+          <Image
+            src="/profile.jpg"
+            alt="Descripción de la imagen"
+            width={150}
+            height={150}
+            className="profile-image"
+          />
+          <p className="name-content"><strong>{user.name} {user.surname}</strong></p>
+          <p className="studies-content"><strong>Sutdies: </strong>{user.studies}</p>
+        </div>
+        <div style={{ height: '50px' }}></div> 
+      </Column>
+      <Column lg={16} md={8} sm={4} className="profile-page__banner">
+        <h2 className="subjects-header">Subjects</h2>
         <SubjectsTable headers={headersSubjects} rows={rowsSubjects} />
-        <h2>Exams</h2>
+        <h2 className="exams-header">Exams</h2>
         <ExamsTable headers={headersExams} rows={rowsExams} />
+        <div style={{ height: '50px' }}></div> 
       </Column>
     </Grid>
   );
 }
 
 export default ProfilePage;
-
-

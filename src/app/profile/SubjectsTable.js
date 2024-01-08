@@ -35,16 +35,16 @@ const SubjectsTable = ({ rows, headers }) => {
       rows={rows}
       headers={headers}
       render={({ rows, headers, getHeaderProps, getRowProps, getTableProps, onInputChange }) => (
-        <TableContainer>
-          <TableToolbar>
+        <TableContainer aria-label='Subjects table' role='table'>
+          <TableToolbar aria-label='Subjects toolbar' role='toolbar'>
             <TableToolbarSearch expanded={true} onChange={onInputChange} />
           </TableToolbar>
           <Table {...getTableProps()}>
             <TableHead>
-              <TableRow>
+              <TableRow role='row'>
                 <TableExpandHeader />
                 {headers.map((header) => (
-                  <TableHeader key={header.key} {...getHeaderProps({ header, isSortable: true })}>
+                  <TableHeader key={header.key} {...getHeaderProps({ header, isSortable: true })} role='columnheader'>
                     {header.header}
                   </TableHeader>
                 ))}
@@ -53,13 +53,13 @@ const SubjectsTable = ({ rows, headers }) => {
             <TableBody>
               {rows.map((row) => (
                 <React.Fragment key={row.id}>
-                  <TableExpandRow {...getRowProps({ row })} onClick={() => handleExpandClick(row.id)} isExpanded={expandedRowId === row.id}>
+                  <TableExpandRow {...getRowProps({ row })} onClick={() => handleExpandClick(row.id)} isExpanded={expandedRowId === row.id} role='rowgroup'>
                     {row.cells.map((cell) => (
-                      <TableCell key={cell.id}>{cell.value}</TableCell>
+                      <TableCell key={cell.id} role='cell'>{cell.value}</TableCell>
                     ))}
                   </TableExpandRow>
                   {expandedRowId === row.id && (
-                    <TableExpandedRow colSpan={headers.length + 1}>
+                    <TableExpandedRow colSpan={headers.length + 1} role='rowgroup'>
                       <div>
                         <iframe tabIndex={row.isExpanded ? "0" : "-1"} src={expandedLearningGuide} width="100%" height="500px" />
                       </div>

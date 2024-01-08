@@ -21,483 +21,71 @@ import Image from 'next/image';
 
 const newsArray = [
   {
-    title: 'El grupo de investigación Ontology Engineering Group de la ETSIINF lidera el proyecto INESData',
-    content: 'El objetivo principal de INESData es crear una incubadora de espacios de datos en España',
+    title: 'The Ontology Engineering Group of ETSIINF Leads the INESData Project',
+    content: 'The main goal of INESData is to create a data space incubator in Spain',
+    alt: 'INESData logo',
     image: 'https://www.fi.upm.es/GestorTablon/GTimgPortada/4993-imagen_2023_12_19_105619500.png',
     width: '150',
     height: '34'
   },
   {
-    title: 'El proyecto TeresIA, en el que colabora el Grupo de Ingeniería Ontológica de la ETSIINF,  recuperará y fomentará la terminología en español aplicando inteligencia artificial y conocimiento experto',
-    content: 'La iniciativa, coordinada por el CSIC con la participación de varias instituciones, ha sido dotada con 1,4 millones de euros por la Secretaría de Estado de Digitalización e Inteligencia Artificial',
+    title: 'The TeresIA Project, in collaboration with the Ontological Engineering Group of ETSIINF, will recover and promote terminology in Spanish using artificial intelligence and expert knowledge',
+    content: 'The initiative, coordinated by CSIC with the participation of various institutions, has been endowed with 1.4 million euros by the Secretary of State for Digitization and Artificial Intelligence',
+    alt: 'TeresIA logo',
     image: 'https://www.fi.upm.es/GestorTablon/GTimgPortada/4986-Opera_Instanta__769_nea_2023_12_11_091120_www.csic.es.png',
     width: '138',
     height: '61'
   },
   {
-    title: 'El proyecto TeresIA, en el que colabora el Grupo de Ingeniería Ontológica de la ETSIINF,  recuperará y fomentará la terminología en español aplicando inteligencia artificial y conocimiento experto',
-    content: 'La iniciativa, coordinada por el CSIC con la participación de varias instituciones, ha sido dotada con 1,4 millones de euros por la Secretaría de Estado de Digitalización e Inteligencia Artificial',
-    image: 'https://www.fi.upm.es/GestorTablon/GTimgPortada/4986-Opera_Instanta__769_nea_2023_12_11_091120_www.csic.es.png',
-    width: '138',
-    height: '61'
-  },
-  {
-    title: 'El proyecto TeresIA, en el que colabora el Grupo de Ingeniería Ontológica de la ETSIINF,  recuperará y fomentará la terminología en español aplicando inteligencia artificial y conocimiento experto',
-    content: 'La iniciativa, coordinada por el CSIC con la participación de varias instituciones, ha sido dotada con 1,4 millones de euros por la Secretaría de Estado de Digitalización e Inteligencia Artificial',
-    image: 'https://www.fi.upm.es/GestorTablon/GTimgPortada/4986-Opera_Instanta__769_nea_2023_12_11_091120_www.csic.es.png',
-    width: '138',
-    height: '61'
-  }, {
-    title: 'El proyecto TeresIA, en el que colabora el Grupo de Ingeniería Ontológica de la ETSIINF,  recuperará y fomentará la terminología en español aplicando inteligencia artificial y conocimiento experto',
-    content: 'La iniciativa, coordinada por el CSIC con la participación de varias instituciones, ha sido dotada con 1,4 millones de euros por la Secretaría de Estado de Digitalización e Inteligencia Artificial',
-    image: 'https://www.fi.upm.es/GestorTablon/GTimgPortada/4986-Opera_Instanta__769_nea_2023_12_11_091120_www.csic.es.png',
-    width: '138',
-    height: '61'
-  },
-  {
-    title: 'El grupo de investigación Ontology Engineering Group de la ETSIINF lidera el proyecto INESData',
-    content: 'El objetivo principal de INESData es crear una incubadora de espacios de datos en España',
+    title: 'The Ontology Engineering Group of ETSIINF Leads the INESData Project',
+    content: 'The main goal of INESData is to create a data space incubator in Spain',
+    alt: 'INESData logo',
     image: 'https://www.fi.upm.es/GestorTablon/GTimgPortada/4993-imagen_2023_12_19_105619500.png',
     width: '150',
     height: '34'
   },
   {
-    title: 'El proyecto TeresIA, en el que colabora el Grupo de Ingeniería Ontológica de la ETSIINF,  recuperará y fomentará la terminología en español aplicando inteligencia artificial y conocimiento experto',
-    content: 'La iniciativa, coordinada por el CSIC con la participación de varias instituciones, ha sido dotada con 1,4 millones de euros por la Secretaría de Estado de Digitalización e Inteligencia Artificial',
+    title: 'The TeresIA Project, in collaboration with the Ontological Engineering Group of ETSIINF, will recover and promote terminology in Spanish using artificial intelligence and expert knowledge',
+    content: 'The initiative, coordinated by CSIC with the participation of various institutions, has been endowed with 1.4 million euros by the Secretary of State for Digitization and Artificial Intelligence',
+    alt: 'TeresIA logo',
     image: 'https://www.fi.upm.es/GestorTablon/GTimgPortada/4986-Opera_Instanta__769_nea_2023_12_11_091120_www.csic.es.png',
     width: '138',
     height: '61'
   },
   {
-    title: 'El proyecto TeresIA, en el que colabora el Grupo de Ingeniería Ontológica de la ETSIINF,  recuperará y fomentará la terminología en español aplicando inteligencia artificial y conocimiento experto',
-    content: 'La iniciativa, coordinada por el CSIC con la participación de varias instituciones, ha sido dotada con 1,4 millones de euros por la Secretaría de Estado de Digitalización e Inteligencia Artificial',
-    image: 'https://www.fi.upm.es/GestorTablon/GTimgPortada/4986-Opera_Instanta__769_nea_2023_12_11_091120_www.csic.es.png',
-    width: '138',
-    height: '61'
-  },
-  {
-    title: 'El proyecto TeresIA, en el que colabora el Grupo de Ingeniería Ontológica de la ETSIINF,  recuperará y fomentará la terminología en español aplicando inteligencia artificial y conocimiento experto',
-    content: 'La iniciativa, coordinada por el CSIC con la participación de varias instituciones, ha sido dotada con 1,4 millones de euros por la Secretaría de Estado de Digitalización e Inteligencia Artificial',
-    image: 'https://www.fi.upm.es/GestorTablon/GTimgPortada/4986-Opera_Instanta__769_nea_2023_12_11_091120_www.csic.es.png',
-    width: '138',
-    height: '61'
-  }, {
-    title: 'El proyecto TeresIA, en el que colabora el Grupo de Ingeniería Ontológica de la ETSIINF,  recuperará y fomentará la terminología en español aplicando inteligencia artificial y conocimiento experto',
-    content: 'La iniciativa, coordinada por el CSIC con la participación de varias instituciones, ha sido dotada con 1,4 millones de euros por la Secretaría de Estado de Digitalización e Inteligencia Artificial',
-    image: 'https://www.fi.upm.es/GestorTablon/GTimgPortada/4986-Opera_Instanta__769_nea_2023_12_11_091120_www.csic.es.png',
-    width: '138',
-    height: '61'
-  },
-  {
-    title: 'El grupo de investigación Ontology Engineering Group de la ETSIINF lidera el proyecto INESData',
-    content: 'El objetivo principal de INESData es crear una incubadora de espacios de datos en España',
+    title: 'The Ontology Engineering Group of ETSIINF Leads the INESData Project',
+    content: 'The main goal of INESData is to create a data space incubator in Spain',
+    alt: 'INESData logo',
     image: 'https://www.fi.upm.es/GestorTablon/GTimgPortada/4993-imagen_2023_12_19_105619500.png',
     width: '150',
     height: '34'
   },
   {
-    title: 'El proyecto TeresIA, en el que colabora el Grupo de Ingeniería Ontológica de la ETSIINF,  recuperará y fomentará la terminología en español aplicando inteligencia artificial y conocimiento experto',
-    content: 'La iniciativa, coordinada por el CSIC con la participación de varias instituciones, ha sido dotada con 1,4 millones de euros por la Secretaría de Estado de Digitalización e Inteligencia Artificial',
+    title: 'The TeresIA Project, in collaboration with the Ontological Engineering Group of ETSIINF, will recover and promote terminology in Spanish using artificial intelligence and expert knowledge',
+    content: 'The initiative, coordinated by CSIC with the participation of various institutions, has been endowed with 1.4 million euros by the Secretary of State for Digitization and Artificial Intelligence',
+    alt: 'TeresIA logo',
     image: 'https://www.fi.upm.es/GestorTablon/GTimgPortada/4986-Opera_Instanta__769_nea_2023_12_11_091120_www.csic.es.png',
     width: '138',
     height: '61'
   },
   {
-    title: 'El proyecto TeresIA, en el que colabora el Grupo de Ingeniería Ontológica de la ETSIINF,  recuperará y fomentará la terminología en español aplicando inteligencia artificial y conocimiento experto',
-    content: 'La iniciativa, coordinada por el CSIC con la participación de varias instituciones, ha sido dotada con 1,4 millones de euros por la Secretaría de Estado de Digitalización e Inteligencia Artificial',
-    image: 'https://www.fi.upm.es/GestorTablon/GTimgPortada/4986-Opera_Instanta__769_nea_2023_12_11_091120_www.csic.es.png',
-    width: '138',
-    height: '61'
-  },
-  {
-    title: 'El proyecto TeresIA, en el que colabora el Grupo de Ingeniería Ontológica de la ETSIINF,  recuperará y fomentará la terminología en español aplicando inteligencia artificial y conocimiento experto',
-    content: 'La iniciativa, coordinada por el CSIC con la participación de varias instituciones, ha sido dotada con 1,4 millones de euros por la Secretaría de Estado de Digitalización e Inteligencia Artificial',
-    image: 'https://www.fi.upm.es/GestorTablon/GTimgPortada/4986-Opera_Instanta__769_nea_2023_12_11_091120_www.csic.es.png',
-    width: '138',
-    height: '61'
-  }, {
-    title: 'El proyecto TeresIA, en el que colabora el Grupo de Ingeniería Ontológica de la ETSIINF,  recuperará y fomentará la terminología en español aplicando inteligencia artificial y conocimiento experto',
-    content: 'La iniciativa, coordinada por el CSIC con la participación de varias instituciones, ha sido dotada con 1,4 millones de euros por la Secretaría de Estado de Digitalización e Inteligencia Artificial',
-    image: 'https://www.fi.upm.es/GestorTablon/GTimgPortada/4986-Opera_Instanta__769_nea_2023_12_11_091120_www.csic.es.png',
-    width: '138',
-    height: '61'
-  },
-  {
-    title: 'El grupo de investigación Ontology Engineering Group de la ETSIINF lidera el proyecto INESData',
-    content: 'El objetivo principal de INESData es crear una incubadora de espacios de datos en España',
+    title: 'The Ontology Engineering Group of ETSIINF Leads the INESData Project',
+    content: 'The main goal of INESData is to create a data space incubator in Spain',
+    alt: 'INESData logo',
     image: 'https://www.fi.upm.es/GestorTablon/GTimgPortada/4993-imagen_2023_12_19_105619500.png',
     width: '150',
     height: '34'
   },
   {
-    title: 'El proyecto TeresIA, en el que colabora el Grupo de Ingeniería Ontológica de la ETSIINF,  recuperará y fomentará la terminología en español aplicando inteligencia artificial y conocimiento experto',
-    content: 'La iniciativa, coordinada por el CSIC con la participación de varias instituciones, ha sido dotada con 1,4 millones de euros por la Secretaría de Estado de Digitalización e Inteligencia Artificial',
+    title: 'The TeresIA Project, in collaboration with the Ontological Engineering Group of ETSIINF, will recover and promote terminology in Spanish using artificial intelligence and expert knowledge',
+    content: 'The initiative, coordinated by CSIC with the participation of various institutions, has been endowed with 1.4 million euros by the Secretary of State for Digitization and Artificial Intelligence',
+    alt: 'TeresIA logo',
     image: 'https://www.fi.upm.es/GestorTablon/GTimgPortada/4986-Opera_Instanta__769_nea_2023_12_11_091120_www.csic.es.png',
     width: '138',
     height: '61'
   },
-  {
-    title: 'El proyecto TeresIA, en el que colabora el Grupo de Ingeniería Ontológica de la ETSIINF,  recuperará y fomentará la terminología en español aplicando inteligencia artificial y conocimiento experto',
-    content: 'La iniciativa, coordinada por el CSIC con la participación de varias instituciones, ha sido dotada con 1,4 millones de euros por la Secretaría de Estado de Digitalización e Inteligencia Artificial',
-    image: 'https://www.fi.upm.es/GestorTablon/GTimgPortada/4986-Opera_Instanta__769_nea_2023_12_11_091120_www.csic.es.png',
-    width: '138',
-    height: '61'
-  },
-  {
-    title: 'El proyecto TeresIA, en el que colabora el Grupo de Ingeniería Ontológica de la ETSIINF,  recuperará y fomentará la terminología en español aplicando inteligencia artificial y conocimiento experto',
-    content: 'La iniciativa, coordinada por el CSIC con la participación de varias instituciones, ha sido dotada con 1,4 millones de euros por la Secretaría de Estado de Digitalización e Inteligencia Artificial',
-    image: 'https://www.fi.upm.es/GestorTablon/GTimgPortada/4986-Opera_Instanta__769_nea_2023_12_11_091120_www.csic.es.png',
-    width: '138',
-    height: '61'
-  }, {
-    title: 'El proyecto TeresIA, en el que colabora el Grupo de Ingeniería Ontológica de la ETSIINF,  recuperará y fomentará la terminología en español aplicando inteligencia artificial y conocimiento experto',
-    content: 'La iniciativa, coordinada por el CSIC con la participación de varias instituciones, ha sido dotada con 1,4 millones de euros por la Secretaría de Estado de Digitalización e Inteligencia Artificial',
-    image: 'https://www.fi.upm.es/GestorTablon/GTimgPortada/4986-Opera_Instanta__769_nea_2023_12_11_091120_www.csic.es.png',
-    width: '138',
-    height: '61'
-  },
-  {
-    title: 'El grupo de investigación Ontology Engineering Group de la ETSIINF lidera el proyecto INESData',
-    content: 'El objetivo principal de INESData es crear una incubadora de espacios de datos en España',
-    image: 'https://www.fi.upm.es/GestorTablon/GTimgPortada/4993-imagen_2023_12_19_105619500.png',
-    width: '150',
-    height: '34'
-  },
-  {
-    title: 'El proyecto TeresIA, en el que colabora el Grupo de Ingeniería Ontológica de la ETSIINF,  recuperará y fomentará la terminología en español aplicando inteligencia artificial y conocimiento experto',
-    content: 'La iniciativa, coordinada por el CSIC con la participación de varias instituciones, ha sido dotada con 1,4 millones de euros por la Secretaría de Estado de Digitalización e Inteligencia Artificial',
-    image: 'https://www.fi.upm.es/GestorTablon/GTimgPortada/4986-Opera_Instanta__769_nea_2023_12_11_091120_www.csic.es.png',
-    width: '138',
-    height: '61'
-  },
-  {
-    title: 'El proyecto TeresIA, en el que colabora el Grupo de Ingeniería Ontológica de la ETSIINF,  recuperará y fomentará la terminología en español aplicando inteligencia artificial y conocimiento experto',
-    content: 'La iniciativa, coordinada por el CSIC con la participación de varias instituciones, ha sido dotada con 1,4 millones de euros por la Secretaría de Estado de Digitalización e Inteligencia Artificial',
-    image: 'https://www.fi.upm.es/GestorTablon/GTimgPortada/4986-Opera_Instanta__769_nea_2023_12_11_091120_www.csic.es.png',
-    width: '138',
-    height: '61'
-  },
-  {
-    title: 'El proyecto TeresIA, en el que colabora el Grupo de Ingeniería Ontológica de la ETSIINF,  recuperará y fomentará la terminología en español aplicando inteligencia artificial y conocimiento experto',
-    content: 'La iniciativa, coordinada por el CSIC con la participación de varias instituciones, ha sido dotada con 1,4 millones de euros por la Secretaría de Estado de Digitalización e Inteligencia Artificial',
-    image: 'https://www.fi.upm.es/GestorTablon/GTimgPortada/4986-Opera_Instanta__769_nea_2023_12_11_091120_www.csic.es.png',
-    width: '138',
-    height: '61'
-  }, {
-    title: 'El proyecto TeresIA, en el que colabora el Grupo de Ingeniería Ontológica de la ETSIINF,  recuperará y fomentará la terminología en español aplicando inteligencia artificial y conocimiento experto',
-    content: 'La iniciativa, coordinada por el CSIC con la participación de varias instituciones, ha sido dotada con 1,4 millones de euros por la Secretaría de Estado de Digitalización e Inteligencia Artificial',
-    image: 'https://www.fi.upm.es/GestorTablon/GTimgPortada/4986-Opera_Instanta__769_nea_2023_12_11_091120_www.csic.es.png',
-    width: '138',
-    height: '61'
-  },
-  {
-    title: 'El grupo de investigación Ontology Engineering Group de la ETSIINF lidera el proyecto INESData',
-    content: 'El objetivo principal de INESData es crear una incubadora de espacios de datos en España',
-    image: 'https://www.fi.upm.es/GestorTablon/GTimgPortada/4993-imagen_2023_12_19_105619500.png',
-    width: '150',
-    height: '34'
-  },
-  {
-    title: 'El proyecto TeresIA, en el que colabora el Grupo de Ingeniería Ontológica de la ETSIINF,  recuperará y fomentará la terminología en español aplicando inteligencia artificial y conocimiento experto',
-    content: 'La iniciativa, coordinada por el CSIC con la participación de varias instituciones, ha sido dotada con 1,4 millones de euros por la Secretaría de Estado de Digitalización e Inteligencia Artificial',
-    image: 'https://www.fi.upm.es/GestorTablon/GTimgPortada/4986-Opera_Instanta__769_nea_2023_12_11_091120_www.csic.es.png',
-    width: '138',
-    height: '61'
-  },
-  {
-    title: 'El proyecto TeresIA, en el que colabora el Grupo de Ingeniería Ontológica de la ETSIINF,  recuperará y fomentará la terminología en español aplicando inteligencia artificial y conocimiento experto',
-    content: 'La iniciativa, coordinada por el CSIC con la participación de varias instituciones, ha sido dotada con 1,4 millones de euros por la Secretaría de Estado de Digitalización e Inteligencia Artificial',
-    image: 'https://www.fi.upm.es/GestorTablon/GTimgPortada/4986-Opera_Instanta__769_nea_2023_12_11_091120_www.csic.es.png',
-    width: '138',
-    height: '61'
-  },
-  {
-    title: 'El proyecto TeresIA, en el que colabora el Grupo de Ingeniería Ontológica de la ETSIINF,  recuperará y fomentará la terminología en español aplicando inteligencia artificial y conocimiento experto',
-    content: 'La iniciativa, coordinada por el CSIC con la participación de varias instituciones, ha sido dotada con 1,4 millones de euros por la Secretaría de Estado de Digitalización e Inteligencia Artificial',
-    image: 'https://www.fi.upm.es/GestorTablon/GTimgPortada/4986-Opera_Instanta__769_nea_2023_12_11_091120_www.csic.es.png',
-    width: '138',
-    height: '61'
-  }, {
-    title: 'El proyecto TeresIA, en el que colabora el Grupo de Ingeniería Ontológica de la ETSIINF,  recuperará y fomentará la terminología en español aplicando inteligencia artificial y conocimiento experto',
-    content: 'La iniciativa, coordinada por el CSIC con la participación de varias instituciones, ha sido dotada con 1,4 millones de euros por la Secretaría de Estado de Digitalización e Inteligencia Artificial',
-    image: 'https://www.fi.upm.es/GestorTablon/GTimgPortada/4986-Opera_Instanta__769_nea_2023_12_11_091120_www.csic.es.png',
-    width: '138',
-    height: '61'
-  },
-  {
-    title: 'El grupo de investigación Ontology Engineering Group de la ETSIINF lidera el proyecto INESData',
-    content: 'El objetivo principal de INESData es crear una incubadora de espacios de datos en España',
-    image: 'https://www.fi.upm.es/GestorTablon/GTimgPortada/4993-imagen_2023_12_19_105619500.png',
-    width: '150',
-    height: '34'
-  },
-  {
-    title: 'El proyecto TeresIA, en el que colabora el Grupo de Ingeniería Ontológica de la ETSIINF,  recuperará y fomentará la terminología en español aplicando inteligencia artificial y conocimiento experto',
-    content: 'La iniciativa, coordinada por el CSIC con la participación de varias instituciones, ha sido dotada con 1,4 millones de euros por la Secretaría de Estado de Digitalización e Inteligencia Artificial',
-    image: 'https://www.fi.upm.es/GestorTablon/GTimgPortada/4986-Opera_Instanta__769_nea_2023_12_11_091120_www.csic.es.png',
-    width: '138',
-    height: '61'
-  },
-  {
-    title: 'El proyecto TeresIA, en el que colabora el Grupo de Ingeniería Ontológica de la ETSIINF,  recuperará y fomentará la terminología en español aplicando inteligencia artificial y conocimiento experto',
-    content: 'La iniciativa, coordinada por el CSIC con la participación de varias instituciones, ha sido dotada con 1,4 millones de euros por la Secretaría de Estado de Digitalización e Inteligencia Artificial',
-    image: 'https://www.fi.upm.es/GestorTablon/GTimgPortada/4986-Opera_Instanta__769_nea_2023_12_11_091120_www.csic.es.png',
-    width: '138',
-    height: '61'
-  },
-  {
-    title: 'El proyecto TeresIA, en el que colabora el Grupo de Ingeniería Ontológica de la ETSIINF,  recuperará y fomentará la terminología en español aplicando inteligencia artificial y conocimiento experto',
-    content: 'La iniciativa, coordinada por el CSIC con la participación de varias instituciones, ha sido dotada con 1,4 millones de euros por la Secretaría de Estado de Digitalización e Inteligencia Artificial',
-    image: 'https://www.fi.upm.es/GestorTablon/GTimgPortada/4986-Opera_Instanta__769_nea_2023_12_11_091120_www.csic.es.png',
-    width: '138',
-    height: '61'
-  }, {
-    title: 'El proyecto TeresIA, en el que colabora el Grupo de Ingeniería Ontológica de la ETSIINF,  recuperará y fomentará la terminología en español aplicando inteligencia artificial y conocimiento experto',
-    content: 'La iniciativa, coordinada por el CSIC con la participación de varias instituciones, ha sido dotada con 1,4 millones de euros por la Secretaría de Estado de Digitalización e Inteligencia Artificial',
-    image: 'https://www.fi.upm.es/GestorTablon/GTimgPortada/4986-Opera_Instanta__769_nea_2023_12_11_091120_www.csic.es.png',
-    width: '138',
-    height: '61'
-  },
-  {
-    title: 'El grupo de investigación Ontology Engineering Group de la ETSIINF lidera el proyecto INESData',
-    content: 'El objetivo principal de INESData es crear una incubadora de espacios de datos en España',
-    image: 'https://www.fi.upm.es/GestorTablon/GTimgPortada/4993-imagen_2023_12_19_105619500.png',
-    width: '150',
-    height: '34'
-  },
-  {
-    title: 'El proyecto TeresIA, en el que colabora el Grupo de Ingeniería Ontológica de la ETSIINF,  recuperará y fomentará la terminología en español aplicando inteligencia artificial y conocimiento experto',
-    content: 'La iniciativa, coordinada por el CSIC con la participación de varias instituciones, ha sido dotada con 1,4 millones de euros por la Secretaría de Estado de Digitalización e Inteligencia Artificial',
-    image: 'https://www.fi.upm.es/GestorTablon/GTimgPortada/4986-Opera_Instanta__769_nea_2023_12_11_091120_www.csic.es.png',
-    width: '138',
-    height: '61'
-  },
-  {
-    title: 'El proyecto TeresIA, en el que colabora el Grupo de Ingeniería Ontológica de la ETSIINF,  recuperará y fomentará la terminología en español aplicando inteligencia artificial y conocimiento experto',
-    content: 'La iniciativa, coordinada por el CSIC con la participación de varias instituciones, ha sido dotada con 1,4 millones de euros por la Secretaría de Estado de Digitalización e Inteligencia Artificial',
-    image: 'https://www.fi.upm.es/GestorTablon/GTimgPortada/4986-Opera_Instanta__769_nea_2023_12_11_091120_www.csic.es.png',
-    width: '138',
-    height: '61'
-  },
-  {
-    title: 'El proyecto TeresIA, en el que colabora el Grupo de Ingeniería Ontológica de la ETSIINF,  recuperará y fomentará la terminología en español aplicando inteligencia artificial y conocimiento experto',
-    content: 'La iniciativa, coordinada por el CSIC con la participación de varias instituciones, ha sido dotada con 1,4 millones de euros por la Secretaría de Estado de Digitalización e Inteligencia Artificial',
-    image: 'https://www.fi.upm.es/GestorTablon/GTimgPortada/4986-Opera_Instanta__769_nea_2023_12_11_091120_www.csic.es.png',
-    width: '138',
-    height: '61'
-  }, {
-    title: 'El proyecto TeresIA, en el que colabora el Grupo de Ingeniería Ontológica de la ETSIINF,  recuperará y fomentará la terminología en español aplicando inteligencia artificial y conocimiento experto',
-    content: 'La iniciativa, coordinada por el CSIC con la participación de varias instituciones, ha sido dotada con 1,4 millones de euros por la Secretaría de Estado de Digitalización e Inteligencia Artificial',
-    image: 'https://www.fi.upm.es/GestorTablon/GTimgPortada/4986-Opera_Instanta__769_nea_2023_12_11_091120_www.csic.es.png',
-    width: '138',
-    height: '61'
-  },
-  {
-    title: 'El grupo de investigación Ontology Engineering Group de la ETSIINF lidera el proyecto INESData',
-    content: 'El objetivo principal de INESData es crear una incubadora de espacios de datos en España',
-    image: 'https://www.fi.upm.es/GestorTablon/GTimgPortada/4993-imagen_2023_12_19_105619500.png',
-    width: '150',
-    height: '34'
-  },
-  {
-    title: 'El proyecto TeresIA, en el que colabora el Grupo de Ingeniería Ontológica de la ETSIINF,  recuperará y fomentará la terminología en español aplicando inteligencia artificial y conocimiento experto',
-    content: 'La iniciativa, coordinada por el CSIC con la participación de varias instituciones, ha sido dotada con 1,4 millones de euros por la Secretaría de Estado de Digitalización e Inteligencia Artificial',
-    image: 'https://www.fi.upm.es/GestorTablon/GTimgPortada/4986-Opera_Instanta__769_nea_2023_12_11_091120_www.csic.es.png',
-    width: '138',
-    height: '61'
-  },
-  {
-    title: 'El proyecto TeresIA, en el que colabora el Grupo de Ingeniería Ontológica de la ETSIINF,  recuperará y fomentará la terminología en español aplicando inteligencia artificial y conocimiento experto',
-    content: 'La iniciativa, coordinada por el CSIC con la participación de varias instituciones, ha sido dotada con 1,4 millones de euros por la Secretaría de Estado de Digitalización e Inteligencia Artificial',
-    image: 'https://www.fi.upm.es/GestorTablon/GTimgPortada/4986-Opera_Instanta__769_nea_2023_12_11_091120_www.csic.es.png',
-    width: '138',
-    height: '61'
-  },
-  {
-    title: 'El proyecto TeresIA, en el que colabora el Grupo de Ingeniería Ontológica de la ETSIINF,  recuperará y fomentará la terminología en español aplicando inteligencia artificial y conocimiento experto',
-    content: 'La iniciativa, coordinada por el CSIC con la participación de varias instituciones, ha sido dotada con 1,4 millones de euros por la Secretaría de Estado de Digitalización e Inteligencia Artificial',
-    image: 'https://www.fi.upm.es/GestorTablon/GTimgPortada/4986-Opera_Instanta__769_nea_2023_12_11_091120_www.csic.es.png',
-    width: '138',
-    height: '61'
-  }, {
-    title: 'El proyecto TeresIA, en el que colabora el Grupo de Ingeniería Ontológica de la ETSIINF,  recuperará y fomentará la terminología en español aplicando inteligencia artificial y conocimiento experto',
-    content: 'La iniciativa, coordinada por el CSIC con la participación de varias instituciones, ha sido dotada con 1,4 millones de euros por la Secretaría de Estado de Digitalización e Inteligencia Artificial',
-    image: 'https://www.fi.upm.es/GestorTablon/GTimgPortada/4986-Opera_Instanta__769_nea_2023_12_11_091120_www.csic.es.png',
-    width: '138',
-    height: '61'
-  },
-  {
-    title: 'El grupo de investigación Ontology Engineering Group de la ETSIINF lidera el proyecto INESData',
-    content: 'El objetivo principal de INESData es crear una incubadora de espacios de datos en España',
-    image: 'https://www.fi.upm.es/GestorTablon/GTimgPortada/4993-imagen_2023_12_19_105619500.png',
-    width: '150',
-    height: '34'
-  },
-  {
-    title: 'El proyecto TeresIA, en el que colabora el Grupo de Ingeniería Ontológica de la ETSIINF,  recuperará y fomentará la terminología en español aplicando inteligencia artificial y conocimiento experto',
-    content: 'La iniciativa, coordinada por el CSIC con la participación de varias instituciones, ha sido dotada con 1,4 millones de euros por la Secretaría de Estado de Digitalización e Inteligencia Artificial',
-    image: 'https://www.fi.upm.es/GestorTablon/GTimgPortada/4986-Opera_Instanta__769_nea_2023_12_11_091120_www.csic.es.png',
-    width: '138',
-    height: '61'
-  },
-  {
-    title: 'El proyecto TeresIA, en el que colabora el Grupo de Ingeniería Ontológica de la ETSIINF,  recuperará y fomentará la terminología en español aplicando inteligencia artificial y conocimiento experto',
-    content: 'La iniciativa, coordinada por el CSIC con la participación de varias instituciones, ha sido dotada con 1,4 millones de euros por la Secretaría de Estado de Digitalización e Inteligencia Artificial',
-    image: 'https://www.fi.upm.es/GestorTablon/GTimgPortada/4986-Opera_Instanta__769_nea_2023_12_11_091120_www.csic.es.png',
-    width: '138',
-    height: '61'
-  },
-  {
-    title: 'El proyecto TeresIA, en el que colabora el Grupo de Ingeniería Ontológica de la ETSIINF,  recuperará y fomentará la terminología en español aplicando inteligencia artificial y conocimiento experto',
-    content: 'La iniciativa, coordinada por el CSIC con la participación de varias instituciones, ha sido dotada con 1,4 millones de euros por la Secretaría de Estado de Digitalización e Inteligencia Artificial',
-    image: 'https://www.fi.upm.es/GestorTablon/GTimgPortada/4986-Opera_Instanta__769_nea_2023_12_11_091120_www.csic.es.png',
-    width: '138',
-    height: '61'
-  }, {
-    title: 'El proyecto TeresIA, en el que colabora el Grupo de Ingeniería Ontológica de la ETSIINF,  recuperará y fomentará la terminología en español aplicando inteligencia artificial y conocimiento experto',
-    content: 'La iniciativa, coordinada por el CSIC con la participación de varias instituciones, ha sido dotada con 1,4 millones de euros por la Secretaría de Estado de Digitalización e Inteligencia Artificial',
-    image: 'https://www.fi.upm.es/GestorTablon/GTimgPortada/4986-Opera_Instanta__769_nea_2023_12_11_091120_www.csic.es.png',
-    width: '138',
-    height: '61'
-  },
-  {
-    title: 'El grupo de investigación Ontology Engineering Group de la ETSIINF lidera el proyecto INESData',
-    content: 'El objetivo principal de INESData es crear una incubadora de espacios de datos en España',
-    image: 'https://www.fi.upm.es/GestorTablon/GTimgPortada/4993-imagen_2023_12_19_105619500.png',
-    width: '150',
-    height: '34'
-  },
-  {
-    title: 'El proyecto TeresIA, en el que colabora el Grupo de Ingeniería Ontológica de la ETSIINF,  recuperará y fomentará la terminología en español aplicando inteligencia artificial y conocimiento experto',
-    content: 'La iniciativa, coordinada por el CSIC con la participación de varias instituciones, ha sido dotada con 1,4 millones de euros por la Secretaría de Estado de Digitalización e Inteligencia Artificial',
-    image: 'https://www.fi.upm.es/GestorTablon/GTimgPortada/4986-Opera_Instanta__769_nea_2023_12_11_091120_www.csic.es.png',
-    width: '138',
-    height: '61'
-  },
-  {
-    title: 'El proyecto TeresIA, en el que colabora el Grupo de Ingeniería Ontológica de la ETSIINF,  recuperará y fomentará la terminología en español aplicando inteligencia artificial y conocimiento experto',
-    content: 'La iniciativa, coordinada por el CSIC con la participación de varias instituciones, ha sido dotada con 1,4 millones de euros por la Secretaría de Estado de Digitalización e Inteligencia Artificial',
-    image: 'https://www.fi.upm.es/GestorTablon/GTimgPortada/4986-Opera_Instanta__769_nea_2023_12_11_091120_www.csic.es.png',
-    width: '138',
-    height: '61'
-  },
-  {
-    title: 'El proyecto TeresIA, en el que colabora el Grupo de Ingeniería Ontológica de la ETSIINF,  recuperará y fomentará la terminología en español aplicando inteligencia artificial y conocimiento experto',
-    content: 'La iniciativa, coordinada por el CSIC con la participación de varias instituciones, ha sido dotada con 1,4 millones de euros por la Secretaría de Estado de Digitalización e Inteligencia Artificial',
-    image: 'https://www.fi.upm.es/GestorTablon/GTimgPortada/4986-Opera_Instanta__769_nea_2023_12_11_091120_www.csic.es.png',
-    width: '138',
-    height: '61'
-  }, {
-    title: 'El proyecto TeresIA, en el que colabora el Grupo de Ingeniería Ontológica de la ETSIINF,  recuperará y fomentará la terminología en español aplicando inteligencia artificial y conocimiento experto',
-    content: 'La iniciativa, coordinada por el CSIC con la participación de varias instituciones, ha sido dotada con 1,4 millones de euros por la Secretaría de Estado de Digitalización e Inteligencia Artificial',
-    image: 'https://www.fi.upm.es/GestorTablon/GTimgPortada/4986-Opera_Instanta__769_nea_2023_12_11_091120_www.csic.es.png',
-    width: '138',
-    height: '61'
-  },
-  {
-    title: 'El grupo de investigación Ontology Engineering Group de la ETSIINF lidera el proyecto INESData',
-    content: 'El objetivo principal de INESData es crear una incubadora de espacios de datos en España',
-    image: 'https://www.fi.upm.es/GestorTablon/GTimgPortada/4993-imagen_2023_12_19_105619500.png',
-    width: '150',
-    height: '34'
-  },
-  {
-    title: 'El proyecto TeresIA, en el que colabora el Grupo de Ingeniería Ontológica de la ETSIINF,  recuperará y fomentará la terminología en español aplicando inteligencia artificial y conocimiento experto',
-    content: 'La iniciativa, coordinada por el CSIC con la participación de varias instituciones, ha sido dotada con 1,4 millones de euros por la Secretaría de Estado de Digitalización e Inteligencia Artificial',
-    image: 'https://www.fi.upm.es/GestorTablon/GTimgPortada/4986-Opera_Instanta__769_nea_2023_12_11_091120_www.csic.es.png',
-    width: '138',
-    height: '61'
-  },
-  {
-    title: 'El proyecto TeresIA, en el que colabora el Grupo de Ingeniería Ontológica de la ETSIINF,  recuperará y fomentará la terminología en español aplicando inteligencia artificial y conocimiento experto',
-    content: 'La iniciativa, coordinada por el CSIC con la participación de varias instituciones, ha sido dotada con 1,4 millones de euros por la Secretaría de Estado de Digitalización e Inteligencia Artificial',
-    image: 'https://www.fi.upm.es/GestorTablon/GTimgPortada/4986-Opera_Instanta__769_nea_2023_12_11_091120_www.csic.es.png',
-    width: '138',
-    height: '61'
-  },
-  {
-    title: 'El proyecto TeresIA, en el que colabora el Grupo de Ingeniería Ontológica de la ETSIINF,  recuperará y fomentará la terminología en español aplicando inteligencia artificial y conocimiento experto',
-    content: 'La iniciativa, coordinada por el CSIC con la participación de varias instituciones, ha sido dotada con 1,4 millones de euros por la Secretaría de Estado de Digitalización e Inteligencia Artificial',
-    image: 'https://www.fi.upm.es/GestorTablon/GTimgPortada/4986-Opera_Instanta__769_nea_2023_12_11_091120_www.csic.es.png',
-    width: '138',
-    height: '61'
-  }, {
-    title: 'El proyecto TeresIA, en el que colabora el Grupo de Ingeniería Ontológica de la ETSIINF,  recuperará y fomentará la terminología en español aplicando inteligencia artificial y conocimiento experto',
-    content: 'La iniciativa, coordinada por el CSIC con la participación de varias instituciones, ha sido dotada con 1,4 millones de euros por la Secretaría de Estado de Digitalización e Inteligencia Artificial',
-    image: 'https://www.fi.upm.es/GestorTablon/GTimgPortada/4986-Opera_Instanta__769_nea_2023_12_11_091120_www.csic.es.png',
-    width: '138',
-    height: '61'
-  },
-  {
-    title: 'El grupo de investigación Ontology Engineering Group de la ETSIINF lidera el proyecto INESData',
-    content: 'El objetivo principal de INESData es crear una incubadora de espacios de datos en España',
-    image: 'https://www.fi.upm.es/GestorTablon/GTimgPortada/4993-imagen_2023_12_19_105619500.png',
-    width: '150',
-    height: '34'
-  },
-  {
-    title: 'El proyecto TeresIA, en el que colabora el Grupo de Ingeniería Ontológica de la ETSIINF,  recuperará y fomentará la terminología en español aplicando inteligencia artificial y conocimiento experto',
-    content: 'La iniciativa, coordinada por el CSIC con la participación de varias instituciones, ha sido dotada con 1,4 millones de euros por la Secretaría de Estado de Digitalización e Inteligencia Artificial',
-    image: 'https://www.fi.upm.es/GestorTablon/GTimgPortada/4986-Opera_Instanta__769_nea_2023_12_11_091120_www.csic.es.png',
-    width: '138',
-    height: '61'
-  },
-  {
-    title: 'El proyecto TeresIA, en el que colabora el Grupo de Ingeniería Ontológica de la ETSIINF,  recuperará y fomentará la terminología en español aplicando inteligencia artificial y conocimiento experto',
-    content: 'La iniciativa, coordinada por el CSIC con la participación de varias instituciones, ha sido dotada con 1,4 millones de euros por la Secretaría de Estado de Digitalización e Inteligencia Artificial',
-    image: 'https://www.fi.upm.es/GestorTablon/GTimgPortada/4986-Opera_Instanta__769_nea_2023_12_11_091120_www.csic.es.png',
-    width: '138',
-    height: '61'
-  },
-  {
-    title: 'El proyecto TeresIA, en el que colabora el Grupo de Ingeniería Ontológica de la ETSIINF,  recuperará y fomentará la terminología en español aplicando inteligencia artificial y conocimiento experto',
-    content: 'La iniciativa, coordinada por el CSIC con la participación de varias instituciones, ha sido dotada con 1,4 millones de euros por la Secretaría de Estado de Digitalización e Inteligencia Artificial',
-    image: 'https://www.fi.upm.es/GestorTablon/GTimgPortada/4986-Opera_Instanta__769_nea_2023_12_11_091120_www.csic.es.png',
-    width: '138',
-    height: '61'
-  }, {
-    title: 'El proyecto TeresIA, en el que colabora el Grupo de Ingeniería Ontológica de la ETSIINF,  recuperará y fomentará la terminología en español aplicando inteligencia artificial y conocimiento experto',
-    content: 'La iniciativa, coordinada por el CSIC con la participación de varias instituciones, ha sido dotada con 1,4 millones de euros por la Secretaría de Estado de Digitalización e Inteligencia Artificial',
-    image: 'https://www.fi.upm.es/GestorTablon/GTimgPortada/4986-Opera_Instanta__769_nea_2023_12_11_091120_www.csic.es.png',
-    width: '138',
-    height: '61'
-  },
-  {
-    title: 'El grupo de investigación Ontology Engineering Group de la ETSIINF lidera el proyecto INESData',
-    content: 'El objetivo principal de INESData es crear una incubadora de espacios de datos en España',
-    image: 'https://www.fi.upm.es/GestorTablon/GTimgPortada/4993-imagen_2023_12_19_105619500.png',
-    width: '150',
-    height: '34'
-  },
-  {
-    title: 'El proyecto TeresIA, en el que colabora el Grupo de Ingeniería Ontológica de la ETSIINF,  recuperará y fomentará la terminología en español aplicando inteligencia artificial y conocimiento experto',
-    content: 'La iniciativa, coordinada por el CSIC con la participación de varias instituciones, ha sido dotada con 1,4 millones de euros por la Secretaría de Estado de Digitalización e Inteligencia Artificial',
-    image: 'https://www.fi.upm.es/GestorTablon/GTimgPortada/4986-Opera_Instanta__769_nea_2023_12_11_091120_www.csic.es.png',
-    width: '138',
-    height: '61'
-  },
-  {
-    title: 'El proyecto TeresIA, en el que colabora el Grupo de Ingeniería Ontológica de la ETSIINF,  recuperará y fomentará la terminología en español aplicando inteligencia artificial y conocimiento experto',
-    content: 'La iniciativa, coordinada por el CSIC con la participación de varias instituciones, ha sido dotada con 1,4 millones de euros por la Secretaría de Estado de Digitalización e Inteligencia Artificial',
-    image: 'https://www.fi.upm.es/GestorTablon/GTimgPortada/4986-Opera_Instanta__769_nea_2023_12_11_091120_www.csic.es.png',
-    width: '138',
-    height: '61'
-  },
-  {
-    title: 'El proyecto TeresIA, en el que colabora el Grupo de Ingeniería Ontológica de la ETSIINF,  recuperará y fomentará la terminología en español aplicando inteligencia artificial y conocimiento experto',
-    content: 'La iniciativa, coordinada por el CSIC con la participación de varias instituciones, ha sido dotada con 1,4 millones de euros por la Secretaría de Estado de Digitalización e Inteligencia Artificial',
-    image: 'https://www.fi.upm.es/GestorTablon/GTimgPortada/4986-Opera_Instanta__769_nea_2023_12_11_091120_www.csic.es.png',
-    width: '138',
-    height: '61'
-  }, {
-    title: 'El proyecto TeresIA, en el que colabora el Grupo de Ingeniería Ontológica de la ETSIINF,  recuperará y fomentará la terminología en español aplicando inteligencia artificial y conocimiento experto',
-    content: 'La iniciativa, coordinada por el CSIC con la participación de varias instituciones, ha sido dotada con 1,4 millones de euros por la Secretaría de Estado de Digitalización e Inteligencia Artificial',
-    image: 'https://www.fi.upm.es/GestorTablon/GTimgPortada/4986-Opera_Instanta__769_nea_2023_12_11_091120_www.csic.es.png',
-    width: '138',
-    height: '61'
-  },
-  // Add more news items as needed
 ];
+
 export default function LandingPage() {
   const [currentPage, setCurrentPage] = useState(0);
   const itemsPerPage = 3;
@@ -512,134 +100,168 @@ export default function LandingPage() {
     <Grid className="landing-page" fullWidth>
       <Column lg={16} md={8} sm={4} className="landing-page__banner">
         <div style={{
-          backgroundImage: 'url("https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/UPM-FI--Bloque-5.jpg/1280px-UPM-FI--Bloque-5.jpg")',
-          backgroundSize: 'cover',
-          position: 'relative',
-          height: '600px',
-          backgroundPosition: 'bottom',  // Mueve el fondo hacia la parte inferior
+          height: '200px',
         }}>
-          <h1 className="landing-page__heading" style={{ color: 'white' }}>
-            Escuela Técnica Superior de Ingenieros Informáticos
-          </h1>
+          <Image
+            src={"/header.jpg"}
+            alt={"header"}
+            layout="fill"
+            objectFit="cover"
+          />
+          <div style={{
+            backgroundColor: 'rgba(255, 255, 255, 0.5)',
+            display: 'flex',
+            justifyContent: 'left',
+            alignItems: 'center',
+            height: '100%',
+            position: 'relative',
+            zIndex: 1,
+          }}>
+            <Image
+              src={"/logo.png"}
+              alt={"logo"}
+              width={100}
+              height={100}
+              style={{
+                marginLeft: '10px'
+              }}
+            />
+            <h1 className="landing-page__heading" style={{
+              color: 'black',
+              width: '50%',
+              textAlign: 'left',
+              marginLeft: '30px'
+            }}>
+              Escuela Técnica Superior de Ingenieros Informáticos
+            </h1>
+          </div>
         </div>
       </Column>
       <Column lg={16} md={8} sm={4} className="landing-page__r2">
-        <Tabs defaultSelectedIndex={0}>
-          <TabList className="tabs-group" aria-label="Page navigation">
-            <Tab>About</Tab>
-            <Tab>News</Tab>
-          </TabList>
-          <TabPanels>
-            <TabPanel>
-              <p>
-                La Escuela Técnica Superior de Ingenieros Informáticos de la
-                Universidad Politécnica de Madrid es el centro más antiguo de
-                España que imparte la titulación de Ingeniero en Informática de los
-                que existen. A continuación, se listan todos los estudios que ofrece
-                la Universidad:
-              </p>
-              <UnorderedList>
-                <ListItem>
-                  Grados
-                  <UnorderedList nested>
-                    <ListItem>Grado en Matemáticas e Informática</ListItem>
-                    <ListItem>Grado en Ingeniería Informática</ListItem>
-                    <ListItem>Grado en Ciencia de Datos e Inteligencia Artificial</ListItem>
-                    <ListItem>Programa de Ingeniero/a en Informática (Grado + Máster)</ListItem>
-                    <ListItem>Doble Grado en Ingeniería Informática y Administración y Dirección de Empresas</ListItem>
-                  </UnorderedList>
-                </ListItem>
-                <ListItem>
-                  Máster
-                  <UnorderedList nested>
-                    <ListItem>Máster Universitario en Ingeniería Informática</ListItem>
-                    <ListItem>Máster Universitario en Innovación Digital</ListItem>
-                    <ListItem>Máster Universitario en Ingeniería del Software</ListItem>
-                    <ListItem>Máster Universitario en Inteligencia Artificial</ListItem>
-                    <ListItem>Máster Universitario en Ciencia de Datos</ListItem>
-                    <ListItem>Máster Universitario en Software y Sistemas</ListItem>
-                    <ListItem>Máster Universitario en Métodos Formales en Ingeniería Informática</ListItem>
-                  </UnorderedList>
-                </ListItem>
-              </UnorderedList>
-              <p>
-                Nuestros Ingenieros Informáticos están capacitados para realizar
-                cualquier actividad que requiera computadores, se beneficie de ellos
-                o necesite crearlos. De esta forma, la Ingeniería Informática incluye:
-              </p>
-              <UnorderedList>
-                <ListItem>
-                  El diseño y la implementación de sistemas hardware y software
-                </ListItem>
-                <ListItem>
-                  El procesamiento, estructuración y gestión de distintos tipos de información
-                </ListItem>
-                <ListItem>
-                  La seguridad de la información
-                </ListItem>
-                <ListItem>
-                  El uso de computadores para estudios científicos
-                </ListItem>
-                <ListItem>
-                  El desarrollo de sistemas informáticos que se comporten de forma inteligente
-                </ListItem>
-                <ListItem>
-                  La creación y uso de comunicaciones y de sistemas de entretenimiento
-                </ListItem>
-                <ListItem>
-                  La búsqueda y recopilación de información relevante
-                </ListItem>
-                <ListItem>
-                  Sus múltiples aplicaciones en el ámbito profesional, dentro del sector de las Tecnologías de la Información y la Comunicación.
-                </ListItem>
-              </UnorderedList>
-            </TabPanel>
-            <TabPanel>
-              <div className="cds--grid card-story">
-                <Grid fullWidth>
-                  {newsArray.slice(currentPage * itemsPerPage, (currentPage + 1) * itemsPerPage).map((newsItem, index) => (
-                    <Column key={index} lg={5} md={4} sm={4} className='landing-page__news__c1'>
-                      <Theme theme="white">
-                        <ExpressiveCard
-                          className="card expressive-card"
-                          media={<div style={{
-                            height: '150px',  // Alto fijo
-                            backgroundColor: 'white',  // Fondo blanco
-                            display: 'flex',
-                            justifyContent: 'center',
-                            alignItems: 'center',
-                          }}>
-                            <Image
-                              src={newsItem.image}  // Ruta a tu imagen
-                              alt={newsItem.title}
-                              width={newsItem.width}  // Ancho de la imagen
-                              height={newsItem.height}  // Alto de la imagen
-                            />
-                          </div>}
-                          primaryButtonText="Read more"
-                          primaryButtonHref='/contact'
-                          primaryButtonKind='primary'
-                          title={newsItem.title}
-                        >
-                          <p>{newsItem.content}</p>
-                        </ExpressiveCard>
-                      </Theme>
-                    </Column>
-                  ))}
+        <div id="main-content" role='main'>
+          <Tabs defaultSelectedIndex={0}>
+            <TabList className="tabs-group" aria-label="Page navigation">
+              <Tab>About</Tab>
+              <Tab>News</Tab>
+            </TabList>
+            <TabPanels>
+              <TabPanel>
+                <Grid className="tabs-group-content">
+                  <Column md={8} lg={16} sm={4} className="landing-page__tab-content">
+                    <h2 className="landing-page__subheading">About us</h2>
+                    <br />
+                    <p>
+                      Escuela Técnica Superior de Ingeniería Informática of Madrid is the oldest center in Spain that offers the degree of Computer Engineer. Below is a list of all the studies offered by the University:
+                    </p>
+                    <br />
+                    <br />
+                    <UnorderedList>
+                      <ListItem>
+                        Bachelor's Degrees
+                        <UnorderedList nested>
+                          <ListItem>Bachelor's Degree in Mathematics and Computer Science</ListItem>
+                          <ListItem>Bachelor's Degree in Computer Engineering</ListItem>
+                          <ListItem>Bachelor's Degree in Data Science and Artificial Intelligence</ListItem>
+                          <ListItem>Computer Engineer Program (Bachelor's + Master's)</ListItem>
+                          <ListItem>Double Degree in Computer Engineering and Business Administration and Management</ListItem>
+                        </UnorderedList>
+                      </ListItem>
+                      <ListItem>
+                        Master's Degrees
+                        <UnorderedList nested>
+                          <ListItem>Master's Degree in Computer Engineering</ListItem>
+                          <ListItem>Master's Degree in Digital Innovation</ListItem>
+                          <ListItem>Master's Degree in Software Engineering</ListItem>
+                          <ListItem>Master's Degree in Artificial Intelligence</ListItem>
+                          <ListItem>Master's Degree in Data Science</ListItem>
+                          <ListItem>Master's Degree in Software and Systems</ListItem>
+                          <ListItem>Master's Degree in Formal Methods in Computer Engineering</ListItem>
+                        </UnorderedList>
+                      </ListItem>
+                    </UnorderedList>
+                    <br />
+                    <br />
+                    <p>
+                      Our Computer Engineers are trained to carry out any activity that requires computers, benefits from them, or involves creating them. Thus, Computer Engineering includes:
+                    </p>
+                    <br />
+                    <UnorderedList>
+                      <ListItem>
+                        Design and implementation of hardware and software systems
+                      </ListItem>
+                      <ListItem>
+                        Processing, structuring, and management of various types of information
+                      </ListItem>
+                      <ListItem>
+                        Information security
+                      </ListItem>
+                      <ListItem>
+                        Use of computers for scientific studies
+                      </ListItem>
+                      <ListItem>
+                        Development of computer systems that behave intelligently
+                      </ListItem>
+                      <ListItem>
+                        Creation and use of communications and entertainment systems
+                      </ListItem>
+                      <ListItem>
+                        Search and collection of relevant information
+                      </ListItem>
+                      <ListItem>
+                        Multiple applications in the professional field within the Information and Communication Technology sector.
+                      </ListItem>
+                    </UnorderedList>
+                  </Column>
                 </Grid>
-              </div>
-              <div style={{ display: 'flex', justifyContent: 'center' }}>
-                <PaginationNav
-                  loop={false}
-                  page={currentPage}
-                  totalItems={totalPages}
-                  itemsShown={6}
-                  onChange={handlePageChange}
-                />
-              </div>
-            </TabPanel>
-          </TabPanels>
-        </Tabs>
+
+              </TabPanel>
+              <TabPanel>
+                <div className="cds--grid card-story">
+                  <Grid fullWidth className='tabs-group-content'>
+                    {newsArray.slice(currentPage * itemsPerPage, (currentPage + 1) * itemsPerPage).map((newsItem, index) => (
+                      <Column key={index} lg={5} md={4} sm={4} className='landing-page__news__c1'>
+                        <Theme theme="white">
+                          <ExpressiveCard
+                            className="card expressive-card"
+                            media={<div style={{
+                              height: '150px',
+                              backgroundColor: '#E3E3E3',
+                              display: 'flex',
+                              justifyContent: 'center',
+                              alignItems: 'center',
+                            }}>
+                              <Image
+                                src={newsItem.image}
+                                alt={newsItem.alt}
+                                width={newsItem.width}
+                                height={newsItem.height}
+                              />
+                            </div>}
+                            primaryButtonText="Read more"
+                            primaryButtonHref='/development'
+                            primaryButtonKind='primary'
+                            title={newsItem.title}
+                          >
+                            <p>{newsItem.content}</p>
+                          </ExpressiveCard>
+                        </Theme>
+                      </Column>
+                    ))}
+                  </Grid>
+                </div>
+                <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px', marginBottom: '20px' }}>
+                  <PaginationNav
+                    loop={false}
+                    page={currentPage}
+                    totalItems={totalPages}
+                    itemsShown={6}
+                    onChange={handlePageChange}
+                  />
+                </div>
+              </TabPanel>
+            </TabPanels>
+          </Tabs>
+        </div>
       </Column>
     </Grid >
   );

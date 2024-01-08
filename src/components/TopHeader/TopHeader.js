@@ -15,9 +15,6 @@ import {
   SideNavItems,
   HeaderSideNavItems,
 } from '@carbon/react';
-import {
-  UserAvatar,
-} from '@carbon/icons-react';
 
 import Link from 'next/link';
 import Image from 'next/image';
@@ -99,10 +96,10 @@ const TopHeader = () => {
                 aria-label="User"
                 tooltipAlignment="end">
                 <Image
-                  src="https://www.fi.upm.es/GestorTablon/GTimgPortada/4993-imagen_2023_12_19_105619500.png"
+                  src="/profile.jpg"
                   alt="Descripción de la imagen"
-                  width={20}
-                  height={20}
+                  width={40}
+                  height={40}
                   className="profile-image"
                 />
               </HeaderGlobalAction>

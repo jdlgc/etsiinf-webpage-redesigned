@@ -7,12 +7,9 @@ import {
   Table,
   TableHead,
   TableRow,
-  TableExpandHeader,
   TableHeader,
   TableBody,
-  TableExpandRow,
   TableCell,
-  TableExpandedRow,
   TableToolbar,
   TableToolbarSearch,
 } from '@carbon/react';
@@ -30,15 +27,15 @@ const JanuaryExamsTable = ({ rows, headers }) => {
         getTableProps,
         onInputChange
       }) => (
-        <TableContainer>
-          <TableToolbar>
+        <TableContainer aria-label='Exams table' role='table'>
+          <TableToolbar aria-label='Exams toolbar' role='toolbar'>
             <TableToolbarSearch expanded={true} onChange={onInputChange} />
           </TableToolbar>
           <Table {...getTableProps()} size='lg' useZebraStyles={false} aria-label="January exams table">
             <TableHead>
-              <TableRow>
+              <TableRow role='row'>
                 {headers.map((header) => (
-                  <TableHeader key={header.key} {...getHeaderProps({ header, isSortable: true })}>
+                  <TableHeader key={header.key} {...getHeaderProps({ header, isSortable: true })} role='columnheader'>
                     {header.header}
                   </TableHeader>
                 ))}
@@ -46,9 +43,9 @@ const JanuaryExamsTable = ({ rows, headers }) => {
             </TableHead>
             <TableBody>
               {rows.map((row, index) => (
-                <TableRow key={index} {...getRowProps({ row })}>
+                <TableRow key={index} {...getRowProps({ row })} role='row'>
                   {row.cells.map((cell) => (
-                    <TableCell key={cell.id}>{cell.value}</TableCell>
+                    <TableCell key={cell.id} role='cell'>{cell.value}</TableCell>
                   ))}
                 </TableRow>
               ))}

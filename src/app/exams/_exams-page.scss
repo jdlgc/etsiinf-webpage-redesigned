@@ -1,6 +1,21 @@
 @use '@carbon/react/scss/spacing' as *;
+@use '@carbon/react/scss/breakpoint' as *;
 
 .exams-page__r1 {
-  padding-top: $spacing-05;
-  padding-bottom: $spacing-05;
+  padding-top: $spacing-02;
+  padding-bottom: $spacing-09;
+  padding-left: $spacing-06;
+  padding-right: $spacing-06;
+
+  margin-left: -20px;
+  margin-right: -20px;
+
+  @include breakpoint-down(md) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.exams-header {
+  margin-bottom: $spacing-05;
 }

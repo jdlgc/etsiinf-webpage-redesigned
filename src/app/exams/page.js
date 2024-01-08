@@ -1,5 +1,8 @@
 'use client';
 
+import React, { useState } from 'react';
+
+
 import JanuaryExamsTable from './JanuaryExamsTable';
 import JuneExamsTable from './JuneExamsTable';
 import JulyExamsTable from './JulyExamsTable';
@@ -40,7 +43,7 @@ const rowsJanuaryExams = [
     date: '15/01/2023',
     hour: '15:00 - 18:00',
     semester: '3rd semester',
-    classroom: '',
+    classroom: '6306',
   },
   {
     id: '2',
@@ -48,23 +51,23 @@ const rowsJanuaryExams = [
     date: '15/01/2023',
     hour: '15:00 - 18:00',
     semester: '1st semester',
-    classroom: '',
+    classroom: '6306',
   },
   {
     id: '3',
-    exam: 'Robótica',
+    exam: 'Robotics',
     date: '15/01/2023',
     hour: '18:00 - 21:00',
     semester: '3rd semester',
-    classroom: '',
+    classroom: '6306',
   },
   {
     id: '4',
-    exam: 'Sistemas Empotrados y Ubicuos',
+    exam: 'Embedded and Ubiquitous Systems',
     date: '16/01/2023',
     hour: '15:00 - 18:00',
     semester: '1st semester',
-    classroom: '',
+    classroom: '6206',
   },
   {
     id: '5',
@@ -72,23 +75,23 @@ const rowsJanuaryExams = [
     date: '16/01/2023',
     hour: '15:00 - 18:00',
     semester: '3rd semester',
-    classroom: '',
+    classroom: '6206',
   },
   {
     id: '6',
-    exam: 'Infraestructura de Datos Espaciales',
+    exam: 'Spatial Data Infrastructure',
     date: '16/01/2023',
     hour: '18:00 - 21:00',
     semester: '3rd semester',
-    classroom: '',
+    classroom: '6206',
   },
   {
     id: '7',
-    exam: 'Ingeniería Lingüística',
+    exam: 'Linguistic Engineering',
     date: '17/01/2023',
     hour: '15:00 - 18:00',
     semester: '3rd semester',
-    classroom: '',
+    classroom: '5206',
   },
   {
     id: '8',
@@ -96,15 +99,15 @@ const rowsJanuaryExams = [
     date: '17/01/2023',
     hour: '15:00 - 18:00',
     semester: '3rd semester',
-    classroom: '',
+    classroom: '6306',
   },
   {
     id: '9',
-    exam: 'Dirección de Empresas de TI',
+    exam: 'IT Business Management',
     date: '17/01/2023',
     hour: '18:00 - 21:00',
     semester: '3rd semester',
-    classroom: '',
+    classroom: '6106',
   },
   {
     id: '10',
@@ -112,31 +115,31 @@ const rowsJanuaryExams = [
     date: '18/01/2023',
     hour: '15:00 - 18:00',
     semester: '3rd semester',
-    classroom: '',
+    classroom: '6106',
   },
   {
     id: '11',
-    exam: 'Tecnologías Emergestes y Oportunidades de Negocio',
+    exam: 'Emerging Technologies and Business Opportunities',
     date: '18/01/2023',
     hour: '18:00 - 21:00',
     semester: '1st semester',
-    classroom: '',
+    classroom: '6106',
   },
   {
     id: '12',
-    exam: 'Profundización en Ingeniería del Software',
+    exam: 'Deepening in Software Engineering',
     date: '19/01/2023',
     hour: '15:00 - 18:00',
     semester: '1st semester',
-    classroom: '',
+    classroom: '6106',
   },
   {
     id: '13',
-    exam: 'Negocio en TI',
+    exam: 'Business in IT',
     date: '19/01/2023',
     hour: '18:00 - 21:00',
     semester: '3rd semester',
-    classroom: '',
+    classroom: '6306',
   },
   {
     id: '14',
@@ -144,23 +147,23 @@ const rowsJanuaryExams = [
     date: '22/01/2023',
     hour: '15:00 - 18:00',
     semester: '1st semester',
-    classroom: '',
+    classroom: '6306',
   },
   {
     id: '15',
-    exam: 'Desarrollo de Software de Seguridad en Red',
+    exam: 'Network Security Software Development',
     date: '22/01/2023',
     hour: '18:00 - 21:00',
     semester: '3rd semester',
-    classroom: '',
+    classroom: '5106',
   },
   {
     id: '16',
-    exam: 'Sistemas Interactivos',
+    exam: 'Interactive Systems',
     date: '23/01/2023',
     hour: '15:00 - 18:00',
     semester: '1st semester',
-    classroom: '',
+    classroom: '5106',
   },
   {
     id: '17',
@@ -168,15 +171,15 @@ const rowsJanuaryExams = [
     date: '23/01/2023',
     hour: '15:00 - 18:00',
     semester: '3rd semester',
-    classroom: '',
+    classroom: '6306',
   },
   {
     id: '18',
-    exam: 'Minería de Modelos para la Toma de Decisiones',
+    exam: 'Model Mining for Decision Making',
     date: '23/01/2023',
     hour: '18:00 - 21:00',
     semester: '3rd semester',
-    classroom: '',
+    classroom: '6106',
   },
   {
     id: '19',
@@ -184,15 +187,15 @@ const rowsJanuaryExams = [
     date: '24/01/2023',
     hour: '15:00 - 18:00',
     semester: '1st semester',
-    classroom: '',
+    classroom: '6106',
   },
   {
     id: '20',
-    exam: 'Desarrollo de Aplicaciones Móviles',
+    exam: 'Mobile Application Development',
     date: '24/01/2023',
     hour: '15:00 - 18:00',
     semester: '3rd semester',
-    classroom: '',
+    classroom: '6106',
   },
   {
     id: '21',
@@ -200,40 +203,54 @@ const rowsJanuaryExams = [
     date: '24/01/2023',
     hour: '18:00 - 21:00',
     semester: '3rd semester',
-    classroom: '',
+    classroom: '6306',
   },
 ]
 
 function ExamsPage() {
+  const [expandedAccordionId, setExpandedAccordionId] = useState(null);
+
+  const handleAccordionClick = (accordionId) => {
+    if (expandedAccordionId === accordionId) {
+      setExpandedAccordionId(null);
+    } else {
+      setExpandedAccordionId(accordionId);
+    }
+  };
+
   return (
     <Grid className="exams-page">
       <Column lg={16} md={8} sm={4} className="exams-page__r1">
-        <Accordion align='start' size='lg'>
-          <AccordionItem title="January Exams">
-            <JanuaryExamsTable headers={headers} rows={rowsJanuaryExams} />
-            <div>
-              <iframe src='https://www.fi.upm.es/docs/estudios/muii/1645_examenes_enero_23_24_MUII.pdf' width="100%" height="500px" />
-            </div>
-          </AccordionItem>
-          <AccordionItem id="june-exams" title="June Exams">
-            <JanuaryExamsTable headers={headers} rows={rowsJanuaryExams} />
-            <div>
-              <iframe src='https://www.fi.upm.es/docs/estudios/muii/1645_examenes_enero_23_24_MUII.pdf' width="100%" height="500px" />
-            </div>
-          </AccordionItem>
-          <AccordionItem id="july-exams" title="July Exams">
-            <JanuaryExamsTable headers={headers} rows={rowsJanuaryExams} />
-            <div>
-              <iframe src='https://www.fi.upm.es/docs/estudios/muii/1645_examenes_enero_23_24_MUII.pdf' width="100%" height="500px" />
-            </div>
-          </AccordionItem>
-        </Accordion>
-        {/* <div id="june-exams">
+        <div id="main-content" role='main'>
+          <h1 className="exams-header">Exams</h1>
+          <Accordion align='start' size='lg'>
+            <AccordionItem title={<h2>January Exams</h2>} onClick={() => handleAccordionClick('january-exams')} isExpanded={expandedAccordionId === 'january-exams'}>
+              <JanuaryExamsTable headers={headers} rows={rowsJanuaryExams} />
+              <div>
+                <iframe tabIndex={expandedAccordionId === 'january-exams' ? "0" : "-1"} src='https://www.fi.upm.es/docs/estudios/muii/1645_examenes_enero_23_24_MUII.pdf' width="100%" height="500px" />
+              </div>
+            </AccordionItem>
+            <AccordionItem title={<h2>June Exams</h2>} onClick={() => handleAccordionClick('june-exams')} isExpanded={expandedAccordionId === 'june-exams'}>
+              <JanuaryExamsTable headers={headers} rows={rowsJanuaryExams} />
+              <div>
+                <iframe tabIndex={expandedAccordionId === 'june-exams' ? "0" : "-1"} src='https://www.fi.upm.es/docs/estudios/muii/1645_examenes_enero_23_24_MUII.pdf' width="100%" height="500px" />
+              </div>
+            </AccordionItem>
+            <AccordionItem title={<h2>July Exams</h2>} onClick={() => handleAccordionClick('july-exams')} isExpanded={expandedAccordionId === 'july-exams'}>
+              <JanuaryExamsTable headers={headers} rows={rowsJanuaryExams} />
+              <div>
+                <iframe tabIndex={expandedAccordionId === 'july-exams' ? "0" : "-1"} src='https://www.fi.upm.es/docs/estudios/muii/1645_examenes_enero_23_24_MUII.pdf' width="100%" height="500px" />
+              </div>
+            </AccordionItem>
+          </Accordion>
+          {/* <div id="june-exams">
           <JuneExamsTable headers={headers} rows={rowsJuneExams} />
         </div>
         <div id="july-exams">
           <JulyExamsTable headers={headers} rows={rowsJulyExams} />
         </div> */}
+        </div>
+        <div style={{ height: '1150px' }}></div>
       </Column>
     </Grid>
 
