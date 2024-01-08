@@ -337,9 +337,9 @@ const rows = [
 ]
 
 
-function RepoPage() {
+function SubjectsPage() {
   return (
-    <Grid className="repo-page">
+    <Grid className="subjects-page">
       <Column lg={16} md={8} sm={4} className="repo-page__r1">
         <SubjectsTable headers={headers} rows={rows} orginalRows={rows} />
       </Column>
@@ -347,4 +347,4 @@ function RepoPage() {
   );
 }
 
-export default RepoPage;
+export default SubjectsPage;

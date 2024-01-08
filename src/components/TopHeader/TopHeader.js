@@ -23,104 +23,95 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 
-const TopHeader = () => (
-  <HeaderContainer
-    render={({ isSideNavExpanded, onClickSideNavExpand }) => (
-      <Header aria-label="Carbon Tutorial">
-        <SkipToContent />
-        <HeaderMenuButton
-          aria-label="Open menu"
-          onClick={onClickSideNavExpand}
-          isActive={isSideNavExpanded}
-        />
+import { usePathname, useSearchParams } from 'next/navigation'; // Importa los hooks de next/navigation
 
-        <Link href="/" passHref legacyBehavior>
-          <HeaderName prefix="">
-          <Image
-              className="logo-header"
-              src="/logo.png"
-              alt="Carbon illustration"
-              width={40}
-              height={40}
-            />
-            ETS Ingenieros Informáticos
-          </HeaderName>
-        </Link>
-        <HeaderNavigation aria-label="Carbon Tutorial">
-          <Link href="/home" passHref legacyBehavior>
-            <HeaderMenuItem >
-              Home
-            </HeaderMenuItem>
+const TopHeader = () => {
+  const pathname = usePathname(); // Utiliza el hook para acceder a la ruta actual
+  const searchParams = useSearchParams(); // Utiliza el hook para acceder a los parámetros de búsqueda de la ruta actual
+
+  return (
+    <HeaderContainer
+      render={({ isSideNavExpanded, onClickSideNavExpand }) => (
+        <Header aria-label="Carbon Tutorial">
+          <SkipToContent />
+          <HeaderMenuButton
+            aria-label="Open menu"
+            onClick={onClickSideNavExpand}
+            isActive={isSideNavExpanded}
+          />
+
+          <Link href="/" passHref legacyBehavior>
+            <HeaderName prefix="">
+              <Image
+                className="logo-header"
+                src="/logo.png"
+                alt="Carbon illustration"
+                width={40}
+                height={40}
+              />
+              ETS Ingenieros Informáticos
+            </HeaderName>
           </Link>
-          <Link href="/subjects" passHref legacyBehavior>
-            <HeaderMenuItem >
-              Subjects
-            </HeaderMenuItem>
-          </Link>
-          <HeaderMenu aria-label="Exams" menuLinkName="Exams">
-            <Link href="/exams#first-quarter" passHref legacyBehavior>
-              <HeaderMenuItem >
-                First quarter
+          <HeaderNavigation aria-label="Carbon Tutorial">
+            <Link href="/home" passHref legacyBehavior>
+              <HeaderMenuItem isActive={!!(pathname === '/home') || !!(pathname === '/')}>
+                Home
               </HeaderMenuItem>
             </Link>
-            <Link href="/exams#second-quarter" passHref legacyBehavior>
-              <HeaderMenuItem >
-                Second quarter
+            <Link href="/subjects" passHref legacyBehavior>
+              <HeaderMenuItem isActive={!!(pathname === '/subjects')}>
+                Subjects
               </HeaderMenuItem>
             </Link>
-            <Link href="/exams#third-quarter" passHref legacyBehavior>
-              <HeaderMenuItem >
-                Third quarter
+            <Link href="/exams" passHref legacyBehavior>
+              <HeaderMenuItem isActive={!!(pathname === '/exams')}>
+                Exams
               </HeaderMenuItem>
             </Link>
-          </HeaderMenu>
-        </HeaderNavigation>
-        <SideNav
-          aria-label="Side navigation"
-          expanded={isSideNavExpanded}
-          isPersistent={false}>
-          <SideNavItems>
-            <HeaderSideNavItems>
-              <Link href="/home" passHref legacyBehavior>
-                <HeaderMenuItem >
-                  Home
-                </HeaderMenuItem>
-              </Link>
-              <Link href="/subjects" passHref legacyBehavior>
-                <HeaderMenuItem >
-                  Subjects
-                </HeaderMenuItem>
-              </Link>
-              <HeaderMenu aria-label="Exams" menuLinkName="Exams">
-                <Link href="/exams#first-quarter" passHref legacyBehavior>
-                  <HeaderMenuItem >
-                    First quarter
+          </HeaderNavigation>
+          <SideNav
+            aria-label="Side navigation"
+            expanded={isSideNavExpanded}
+            isPersistent={false}>
+            <SideNavItems>
+              <HeaderSideNavItems>
+                <Link href="/home" passHref legacyBehavior>
+                  <HeaderMenuItem isActive={!!(pathname === '/home') || !!(pathname === '/')}>
+                    Home
                   </HeaderMenuItem>
                 </Link>
-                <Link href="/exams#second-quarter" passHref legacyBehavior>
-                  <HeaderMenuItem >
-                    Second quarter
+                <Link href="/subjects" passHref legacyBehavior>
+                  <HeaderMenuItem isActive={!!(pathname === '/subjects')}>
+                    Subjects
                   </HeaderMenuItem>
                 </Link>
-                <Link href="/exams#third-quarter" passHref legacyBehavior>
-                  <HeaderMenuItem >
-                    Third quarter
+                <Link href="/exams" passHref legacyBehavior>
+                  <HeaderMenuItem isActive={!!(pathname === '/exams')}>
+                    Exams
                   </HeaderMenuItem>
                 </Link>
-              </HeaderMenu>
-            </HeaderSideNavItems>
-          </SideNavItems>
-        </SideNav>
-        <HeaderGlobalBar>
-          <HeaderGlobalAction
-            aria-label="User Avatar"
-            tooltipAlignment="center">
-            <UserAvatar size={20} />
-          </HeaderGlobalAction>
-        </HeaderGlobalBar>
-      </Header>
-    )}
-  />
-);
+              </HeaderSideNavItems>
+            </SideNavItems>
+          </SideNav>
+          <HeaderGlobalBar>
+            <Link href="/profile" passHref legacyBehavior>
+              <HeaderGlobalAction
+                aria-label="User"
+                tooltipAlignment="end">
+                <Image
+                  src="https://www.fi.upm.es/GestorTablon/GTimgPortada/4993-imagen_2023_12_19_105619500.png"
+                  alt="Descripción de la imagen"
+                  width={20}
+                  height={20}
+                  className="profile-image"
+                />
+              </HeaderGlobalAction>
+            </Link>
+          </HeaderGlobalBar>
+        </Header>
+      )}
+    />
+  );
+};
 
 export default TopHeader;
