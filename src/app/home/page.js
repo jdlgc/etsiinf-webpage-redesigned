@@ -104,7 +104,7 @@ export default function LandingPage() {
         }}>
           <Image
             src={"/header.jpg"}
-            alt={"header"}
+            alt={"A laptop open for header"}
             layout="fill"
             objectFit="cover"
           />
@@ -119,7 +119,7 @@ export default function LandingPage() {
           }}>
             <Image
               src={"/logo.png"}
-              alt={"logo"}
+              alt={"ETSIINF logo"}
               width={100}
               height={100}
               style={{

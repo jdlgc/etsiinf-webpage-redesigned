@@ -137,7 +137,7 @@ function ProfilePage() {
           <h1 className="profile-header">Profile</h1>
           <Image
             src="/profile.jpg"
-            alt="Descripción de la imagen"
+            alt="Profile image"
             width={150}
             height={150}
             className="profile-image"
