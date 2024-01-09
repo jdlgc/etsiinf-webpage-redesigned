@@ -1,13 +1,15 @@
-const repo = 'etsiinf-webpage-redesigned';
-const assetPrefix = '/${repo}/';
-const basePath = '/${repo}';
+/** @type {import('next').NextConfig} */
 
-module.exports = {
+const repo = 'etsiinf';
+const assetPrefix = `/${repo}/`;
+const basePath = `/${repo}`;
+
+const nextConfig = {
   assetPrefix: assetPrefix,
   basePath: basePath,
   images: {
     domains: ['www.fi.upm.es'],
-    unoptimized: true,
   },
-  output: "export"
-};
+}
+
+module.exports = nextConfig
