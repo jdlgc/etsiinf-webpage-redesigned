@@ -6,6 +6,8 @@
   "bugs": "https://github.com/jdlgc/etsiinf-webpage-redesigned/issues",
   "homepage": "https://jdlgc.github.io/etsiinf-webpage-redesigned/",
   "license": "Apache-2.0",
+  "predeploy": "yarn run build",
+  "deploy": "gh-pages -d build",
   "scripts": {
     "build": "next build",
     "dev": "next dev",
