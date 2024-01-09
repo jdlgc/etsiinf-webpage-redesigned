@@ -136,7 +136,7 @@ function ProfilePage() {
         <Column lg={16} md={8} sm={4} className="landing-page__banner">
           <h1 className="profile-header">Profile</h1>
           <Image
-            src="/profile.jpg"
+            src="/static/images/profile.jpg"
             alt="User avatar"
             width={150}
             height={150}

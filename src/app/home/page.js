@@ -108,7 +108,7 @@ export default function LandingPage() {
           height: '200px',
         }}>
           <Image
-            src={"/header.jpg"}
+            src={"/static/images/header.jpg"}
             alt={"A laptop open for header"}
             layout="fill"
             objectFit="cover"
@@ -123,7 +123,7 @@ export default function LandingPage() {
             zIndex: 1,
           }}>
             <Image
-              src={"/logo.png"}
+              src={"/static/images/logo.png"}
               alt={"ETSIINF shield"}
               width={100}
               height={100}

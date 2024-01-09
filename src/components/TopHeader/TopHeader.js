@@ -41,7 +41,7 @@ const TopHeader = () => {
             <HeaderName prefix="">
               <Image
                 className="logo-header"
-                src="/logo.png"
+                src="/static/images/logo.png"
                 alt="ETSIINF shield"
                 width={40}
                 height={40}
@@ -96,7 +96,7 @@ const TopHeader = () => {
                 aria-label="User"
                 tooltipAlignment="end">
                 <Image
-                  src="/profile.jpg"
+                  src="/static/images/profile.jpg"
                   alt="User avatar"
                   width={40}
                   height={40}
