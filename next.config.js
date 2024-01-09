@@ -6,6 +6,7 @@ module.exports = {
   assetPrefix: assetPrefix,
   images: {
     domains: ['www.fi.upm.es'],
+    unoptimized: true,
   },
   output: "export"
 };
