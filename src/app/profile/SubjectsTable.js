@@ -35,7 +35,7 @@ const SubjectsTable = ({ rows, headers }) => {
       rows={rows}
       headers={headers}
       render={({ rows, headers, getHeaderProps, getRowProps, getTableProps, onInputChange }) => (
-        <TableContainer title="Listado de asignaturas del plan de estudios" description="10AN - MÁSTER UNIVERSITARIO EN INGENIERÍA INFORMÁTICA (MUII)" aria-label='Subjects table' role='table'>
+        <TableContainer aria-label='Subjects table' role='table'>
           <TableToolbar aria-label='Toolbar for search' role='toolbar'>
             <TableToolbarSearch expanded={true} onChange={onInputChange} role="searchbox" />
           </TableToolbar>
