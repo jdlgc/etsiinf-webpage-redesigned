@@ -1,16 +1,10 @@
-/** @type {import('next').NextConfig} */
-const repo = 'https://jdlgc.github.io/etsiinf-webpage-redesigned'
-const assetPrefix = `/${repo}/`
-const basePath = `/${repo}`
+const isProd = process.env.NODE_ENV === 'production';
+const assetPrefix = isProd ? '/nombre-del-repositorio' : '';
 
-const nextConfig = {
+module.exports = {
+  basePath: isProd ? '/nombre-del-repositorio' : '',
   assetPrefix: assetPrefix,
-  basePath: basePath,
-    images: {
-        domains: ['www.fi.upm.es'],
-      },
-}
-
-module.exports = nextConfig
-
-
+  images: {
+    domains: ['www.fi.upm.es'],
+  },
+};
