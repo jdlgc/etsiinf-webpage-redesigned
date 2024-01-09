@@ -9,6 +9,8 @@
   "predeploy": "yarn run build",
   "deploy": "gh-pages -d build",
   "scripts": {
+    "deploy": "gh-pages-deploy",
+    "clean-source": "rimraf README.md src webroot package.json",
     "build": "next build",
     "dev": "next dev",
     "start": "next start",
