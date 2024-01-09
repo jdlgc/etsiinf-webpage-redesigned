@@ -162,25 +162,25 @@ export default function LandingPage() {
                     <br />
                     <UnorderedList>
                       <ListItem>
-                        Bachelor's Degrees
+                        Bachelor&apos;s Degrees
                         <UnorderedList nested>
-                          <ListItem>Bachelor's Degree in Mathematics and Computer Science</ListItem>
-                          <ListItem>Bachelor's Degree in Computer Engineering</ListItem>
-                          <ListItem>Bachelor's Degree in Data Science and Artificial Intelligence</ListItem>
-                          <ListItem>Computer Engineer Program (Bachelor's + Master's)</ListItem>
+                          <ListItem>Bachelor&apos;s Degree in Mathematics and Computer Science</ListItem>
+                          <ListItem>Bachelor&apos;s Degree in Computer Engineering</ListItem>
+                          <ListItem>Bachelor&apos;s Degree in Data Science and Artificial Intelligence</ListItem>
+                          <ListItem>Computer Engineer Program (Bachelor&apos;s + Master&apos;s)</ListItem>
                           <ListItem>Double Degree in Computer Engineering and Business Administration and Management</ListItem>
                         </UnorderedList>
                       </ListItem>
                       <ListItem>
-                        Master's Degrees
+                        Master&apos;s Degrees
                         <UnorderedList nested>
-                          <ListItem>Master's Degree in Computer Engineering</ListItem>
-                          <ListItem>Master's Degree in Digital Innovation</ListItem>
-                          <ListItem>Master's Degree in Software Engineering</ListItem>
-                          <ListItem>Master's Degree in Artificial Intelligence</ListItem>
-                          <ListItem>Master's Degree in Data Science</ListItem>
-                          <ListItem>Master's Degree in Software and Systems</ListItem>
-                          <ListItem>Master's Degree in Formal Methods in Computer Engineering</ListItem>
+                          <ListItem>Master&apos;s Degree in Computer Engineering</ListItem>
+                          <ListItem>Master&apos;s Degree in Digital Innovation</ListItem>
+                          <ListItem>Master&apos;s Degree in Software Engineering</ListItem>
+                          <ListItem>Master&apos;s Degree in Artificial Intelligence</ListItem>
+                          <ListItem>Master&apos;s Degree in Data Science</ListItem>
+                          <ListItem>Master&apos;s Degree in Software and Systems</ListItem>
+                          <ListItem>Master&apos;s Degree in Formal Methods in Computer Engineering</ListItem>
                         </UnorderedList>
                       </ListItem>
                     </UnorderedList>
