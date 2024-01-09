@@ -1,9 +1,10 @@
-const isProd = process.env.NODE_ENV === 'production';
-const assetPrefix = isProd ? '/etsiinf-webpage-redesigned' : '';
+const repo = 'etsiinf-webpage-redesigned';
+const assetPrefix = '/${repo}/';
+const basePath = '/${repo}';
 
 module.exports = {
-  basePath: isProd ? '/etsiinf-webpage-redesigned' : '',
   assetPrefix: assetPrefix,
+  basePath: basePath,
   images: {
     domains: ['www.fi.upm.es'],
     unoptimized: true,

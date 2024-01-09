@@ -10,7 +10,7 @@
     "build": "next build",
     "export": "next export",
     "predeploy": "yarn run build && yarn run export",
-    "deploy": "gh-pages -d out -b main",
+    "deploy": "gh-pages",
     "dev": "next dev",
     "start": "next start",
     "lint": "next lint",
