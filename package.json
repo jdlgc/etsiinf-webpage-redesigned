@@ -4,6 +4,7 @@
   "private": true,
   "repository": "git@github.com:jdlgc/etsiinf-webpage-redesigned.git",
   "bugs": "https://github.com/jdlgc/etsiinf-webpage-redesigned/issues",
+  "homepage": "https://jdlgc.github.io/etsiinf-webpage-redesigned/",
   "license": "Apache-2.0",
   "scripts": {
     "build": "next build",
@@ -22,6 +23,7 @@
     "core-js": "^3.35.0",
     "eslint": "8.44.0",
     "eslint-config-next": "13.4.9",
+    "gh-pages": "^6.1.1",
     "next": "13.4.9",
     "react": "18.2.0",
     "react-dom": "18.2.0",
