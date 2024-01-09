@@ -4,7 +4,8 @@ const nextConfig = {
     domains: ['www.fi.upm.es'],
     unoptimized: true,
   },
-  output: "export"
+  output: "export",
+  distDir: 'dist'
 };
 
 module.exports = nextConfig;
