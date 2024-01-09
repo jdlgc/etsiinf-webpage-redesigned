@@ -1,3 +1,5 @@
+/** @type {import('next').NextConfig} */
+
 const isProd = process.env.NODE_ENV === 'production';
 const assetPrefix = isProd ? '/etsiinf-webpage-redesigned' : '';
 
